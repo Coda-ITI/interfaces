@@ -59,6 +59,8 @@ enum VehicleProperty {
     /**
      * Manufacturer of vehicle
      *
+     * This property must communicate the vehicle's public brand name.
+     *
      * @change_mode VehiclePropertyChangeMode.STATIC
      * @access VehiclePropertyAccess.READ
      * @version 2
@@ -67,6 +69,8 @@ enum VehicleProperty {
             + 0x00100000, // VehiclePropertyGroup:SYSTEM,VehicleArea:GLOBAL,VehiclePropertyType:STRING
     /**
      * Model of vehicle
+     *
+     * This property must communicate the vehicle's public model name.
      *
      * @change_mode VehiclePropertyChangeMode.STATIC
      * @access VehiclePropertyAccess.READ
@@ -4900,6 +4904,10 @@ enum VehicleProperty {
      * Charging state of the car
      *
      * Returns the current charging state of the car.
+     *
+     * If the vehicle has a target charge percentage other than 100, this property must return
+     * EvChargeState::STATE_FULLY_CHARGED when the battery charge level has reached the target
+     * level. See EV_CHARGE_PERCENT_LIMIT for more context.
      *
      * @change_mode VehiclePropertyChangeMode.ON_CHANGE
      * @access VehiclePropertyAccess.READ
