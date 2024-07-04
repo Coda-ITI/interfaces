@@ -20,6 +20,12 @@ aidl_interface {
         java: {
             sdk_version: "system_current",
         },
+        ndk: {
+            enabled: true,
+        },
+        cpp: {
+            enabled: false,
+        },
     },
     versions: [
         "1",
