@@ -21,10 +21,14 @@
 
 #include <android/binder_manager.h>
 #include <android/binder_process.h>
+#include <android/persistable_bundle_aidl.h>
 
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
 #include <future>
 
+#include "persistable_bundle_utils.h"
 #include "test_utils.h"
 
 using aidl::android::hardware::vibrator::ActivePwle;
@@ -38,6 +42,8 @@ using aidl::android::hardware::vibrator::EffectStrength;
 using aidl::android::hardware::vibrator::IVibrator;
 using aidl::android::hardware::vibrator::IVibratorManager;
 using aidl::android::hardware::vibrator::PrimitivePwle;
+using aidl::android::hardware::vibrator::VendorEffect;
+using aidl::android::os::PersistableBundle;
 using std::chrono::high_resolution_clock;
 
 using namespace ::std::chrono_literals;
@@ -354,6 +360,122 @@ TEST_P(VibratorAidl, InvalidEffectsUnsupported) {
                     vibrator->perform(effect, strength, nullptr /*callback*/, &lengthMs))
                     << "\n  For effect: " << toString(effect) << " " << toString(strength);
         }
+    }
+}
+
+TEST_P(VibratorAidl, PerformVendorEffectSupported) {
+    if ((capabilities & IVibrator::CAP_PERFORM_VENDOR_EFFECTS) == 0) return;
+
+    float scale = 0.5f;
+    for (EffectStrength strength : kEffectStrengths) {
+        PersistableBundle vendorData;
+        ::aidl::android::hardware::vibrator::testing::fillBasicData(&vendorData);
+
+        PersistableBundle nestedData;
+        ::aidl::android::hardware::vibrator::testing::fillBasicData(&nestedData);
+        vendorData.putPersistableBundle("test_nested_bundle", nestedData);
+
+        VendorEffect effect;
+        effect.vendorData = vendorData;
+        effect.strength = strength;
+        effect.scale = scale;
+        scale *= 1.5f;
+
+        auto callback = ndk::SharedRefBase::make<CompletionCallback>([] {});
+        ndk::ScopedAStatus status = vibrator->performVendorEffect(effect, callback);
+
+        // No expectations on the actual status, the effect might be refused with illegal argument
+        // or the vendor might return a service-specific error code.
+        EXPECT_TRUE(status.getExceptionCode() != EX_UNSUPPORTED_OPERATION &&
+                    status.getStatus() != STATUS_UNKNOWN_TRANSACTION)
+                << status << "\n For vendor effect with strength" << toString(strength)
+                << " and scale " << effect.scale;
+
+        if (status.isOk()) {
+            // Generic vendor data should not trigger vibrations, but if it does trigger one
+            // then we make sure the vibrator is reset by triggering off().
+            EXPECT_OK(vibrator->off());
+        }
+    }
+}
+
+TEST_P(VibratorAidl, PerformVendorEffectStability) {
+    if ((capabilities & IVibrator::CAP_PERFORM_VENDOR_EFFECTS) == 0) return;
+
+    // Run some iterations of performVendorEffect with randomized vendor data to check basic
+    // stability of the implementation.
+    uint8_t iterations = 200;
+
+    for (EffectStrength strength : kEffectStrengths) {
+        float scale = 0.5f;
+        for (uint8_t i = 0; i < iterations; i++) {
+            PersistableBundle vendorData;
+            ::aidl::android::hardware::vibrator::testing::fillRandomData(&vendorData);
+
+            VendorEffect effect;
+            effect.vendorData = vendorData;
+            effect.strength = strength;
+            effect.scale = scale;
+            scale *= 2;
+
+            auto callback = ndk::SharedRefBase::make<CompletionCallback>([] {});
+            ndk::ScopedAStatus status = vibrator->performVendorEffect(effect, callback);
+
+            // No expectations on the actual status, the effect might be refused with illegal
+            // argument or the vendor might return a service-specific error code.
+            EXPECT_TRUE(status.getExceptionCode() != EX_UNSUPPORTED_OPERATION &&
+                        status.getStatus() != STATUS_UNKNOWN_TRANSACTION)
+                    << status << "\n For random vendor effect with strength " << toString(strength)
+                    << " and scale " << effect.scale;
+
+            if (status.isOk()) {
+                // Random vendor data should not trigger vibrations, but if it does trigger one
+                // then we make sure the vibrator is reset by triggering off().
+                EXPECT_OK(vibrator->off());
+            }
+        }
+    }
+}
+
+TEST_P(VibratorAidl, PerformVendorEffectEmptyVendorData) {
+    if ((capabilities & IVibrator::CAP_PERFORM_VENDOR_EFFECTS) == 0) return;
+
+    for (EffectStrength strength : kEffectStrengths) {
+        VendorEffect effect;
+        effect.strength = strength;
+        effect.scale = 1.0f;
+
+        ndk::ScopedAStatus status = vibrator->performVendorEffect(effect, nullptr /*callback*/);
+
+        EXPECT_TRUE(status.getExceptionCode() == EX_SERVICE_SPECIFIC)
+                << status << "\n For vendor effect with strength " << toString(strength)
+                << " and scale " << effect.scale;
+    }
+}
+
+TEST_P(VibratorAidl, PerformVendorEffectInvalidScale) {
+    if ((capabilities & IVibrator::CAP_PERFORM_VENDOR_EFFECTS) == 0) return;
+
+    VendorEffect effect;
+    effect.strength = EffectStrength::MEDIUM;
+
+    effect.scale = 0.0f;
+    EXPECT_ILLEGAL_ARGUMENT(vibrator->performVendorEffect(effect, nullptr /*callback*/));
+
+    effect.scale = -1.0f;
+    EXPECT_ILLEGAL_ARGUMENT(vibrator->performVendorEffect(effect, nullptr /*callback*/));
+}
+
+TEST_P(VibratorAidl, PerformVendorEffectUnsupported) {
+    if (capabilities & IVibrator::CAP_PERFORM_VENDOR_EFFECTS) return;
+
+    for (EffectStrength strength : kEffectStrengths) {
+        VendorEffect effect;
+        effect.strength = strength;
+        effect.scale = 1.0f;
+
+        EXPECT_UNKNOWN_OR_UNSUPPORTED(vibrator->performVendorEffect(effect, nullptr /*callback*/))
+                << "\n  For vendor effect with strength " << toString(strength);
     }
 }
 
@@ -940,6 +1062,9 @@ INSTANTIATE_TEST_SUITE_P(Vibrator, VibratorAidl, testing::ValuesIn(GenerateVibra
                          PrintGeneratedTest);
 
 int main(int argc, char **argv) {
+    // Random values are used in the implementation.
+    std::srand(std::time(nullptr));
+
     ::testing::InitGoogleTest(&argc, argv);
     ABinderProcess_setThreadPoolMaxThreadCount(1);
     ABinderProcess_startThreadPool();

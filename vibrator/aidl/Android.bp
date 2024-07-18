@@ -15,6 +15,9 @@ aidl_interface {
     srcs: [
         "android/hardware/vibrator/*.aidl",
     ],
+    headers: [
+        "PersistableBundle_aidl",
+    ],
     stability: "vintf",
     backend: {
         java: {
@@ -26,9 +29,19 @@ aidl_interface {
         cpp: {
             enabled: false,
         },
+        rust: {
+            enabled: false,
+        },
     },
-    versions: [
-        "1",
-        "2",
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
     ],
+    frozen: false,
 }

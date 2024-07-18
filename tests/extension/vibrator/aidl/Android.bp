@@ -43,6 +43,9 @@ aidl_interface {
         cpp: {
             enabled: false,
         },
+        rust: {
+            enabled: false,
+        },
     },
     frozen: true,
     versions_with_info: [

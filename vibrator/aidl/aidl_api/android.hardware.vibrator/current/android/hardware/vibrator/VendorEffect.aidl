@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,19 +33,8 @@
 
 package android.hardware.vibrator;
 @VintfStability
-interface IVibratorManager {
-  int getCapabilities();
-  int[] getVibratorIds();
-  android.hardware.vibrator.IVibrator getVibrator(in int vibratorId);
-  void prepareSynced(in int[] vibratorIds);
-  void triggerSynced(in android.hardware.vibrator.IVibratorCallback callback);
-  void cancelSynced();
-  const int CAP_SYNC = (1 << 0) /* 1 */;
-  const int CAP_PREPARE_ON = (1 << 1) /* 2 */;
-  const int CAP_PREPARE_PERFORM = (1 << 2) /* 4 */;
-  const int CAP_PREPARE_COMPOSE = (1 << 3) /* 8 */;
-  const int CAP_MIXED_TRIGGER_ON = (1 << 4) /* 16 */;
-  const int CAP_MIXED_TRIGGER_PERFORM = (1 << 5) /* 32 */;
-  const int CAP_MIXED_TRIGGER_COMPOSE = (1 << 6) /* 64 */;
-  const int CAP_TRIGGER_CALLBACK = (1 << 7) /* 128 */;
+parcelable VendorEffect {
+  android.os.PersistableBundle vendorData;
+  android.hardware.vibrator.EffectStrength strength = android.hardware.vibrator.EffectStrength.MEDIUM;
+  float scale;
 }
