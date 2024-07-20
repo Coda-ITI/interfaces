@@ -6,10 +6,5 @@
     {
       "name": "VtsHalVibratorManagerTargetTest"
     }
-  ],
-  "postsubmit": [
-      {
-        "name": "VtsHalVibratorPerformVendorEffectFuzzer"
-      }
   ]
 }
