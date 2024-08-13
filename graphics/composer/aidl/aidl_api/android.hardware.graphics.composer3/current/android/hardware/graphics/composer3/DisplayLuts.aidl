@@ -1,5 +1,5 @@
-/**
- * Copyright (c) 2021, The Android Open Source Project
+/*
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,13 +33,7 @@
 
 package android.hardware.graphics.composer3;
 @VintfStability
-union CommandResultPayload {
-  android.hardware.graphics.composer3.CommandError error;
-  android.hardware.graphics.composer3.ChangedCompositionTypes changedCompositionTypes;
-  android.hardware.graphics.composer3.DisplayRequest displayRequest;
-  android.hardware.graphics.composer3.PresentFence presentFence;
-  android.hardware.graphics.composer3.ReleaseFences releaseFences;
-  android.hardware.graphics.composer3.PresentOrValidate presentOrValidateResult;
-  android.hardware.graphics.composer3.ClientTargetPropertyWithBrightness clientTargetProperty;
-  android.hardware.graphics.composer3.DisplayLuts displayLuts;
+parcelable DisplayLuts {
+  long display;
+  android.hardware.graphics.composer3.Lut[] luts;
 }
