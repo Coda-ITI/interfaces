@@ -186,7 +186,7 @@ class ComposerClientReader {
     }
 
     // Get the lut(s) requested by hardware composer.
-    std::vector<Lut> takeLuts(int64_t display) {
+    std::vector<Lut> takeDisplayLuts(int64_t display) {
         LOG_ALWAYS_FATAL_IF(mDisplay && display != *mDisplay);
         auto found = mReturnData.find(display);
 
@@ -249,8 +249,7 @@ class ComposerClientReader {
         auto& data = mReturnData[displayLuts.display];
         for (auto& lut : displayLuts.luts) {
             if (lut.pfd.get() >= 0) {
-                data.luts.push_back({lut.layer,
-                                     std::move(ndk::ScopedFileDescriptor(lut.pfd.release())),
+                data.luts.push_back({lut.layer, ndk::ScopedFileDescriptor(lut.pfd.release()),
                                      lut.lutProperties});
             }
         }
