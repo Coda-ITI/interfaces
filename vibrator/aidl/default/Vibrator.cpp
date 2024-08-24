@@ -543,6 +543,14 @@ float getPwleV2FrequencyMaxHz(std::vector<PwleV2OutputMapEntry> frequencyToOutpu
 
 ndk::ScopedAStatus Vibrator::composePwleV2(const std::vector<PwleV2Primitive>& composite,
                                            const std::shared_ptr<IVibratorCallback>& callback) {
+    int32_t capabilities = 0;
+    if (!getCapabilities(&capabilities).isOk()) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
+    }
+    if ((capabilities & IVibrator::CAP_COMPOSE_PWLE_EFFECTS_V2) == 0) {
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+    }
+
     int compositionSizeMax;
     getPwleV2CompositionSizeMax(&compositionSizeMax);
     if (composite.size() <= 0 || composite.size() > compositionSizeMax) {

@@ -89,6 +89,7 @@ const std::vector<CompositePrimitive> kInvalidPrimitives = {
 static constexpr std::chrono::milliseconds VIBRATION_CALLBACK_TIMEOUT = 100ms;
 
 static constexpr int32_t VENDOR_EFFECTS_MIN_VERSION = 3;
+static constexpr int32_t PWLE_V2_MIN_VERSION = 3;
 
 static std::vector<std::string> findVibratorManagerNames() {
     std::vector<std::string> names;
@@ -1115,6 +1116,17 @@ TEST_P(VibratorAidl, ComposeValidPwleV2Effect) {
 
     EXPECT_OK(vibrator->composePwleV2(pwle_v2_utils::composeValidPwleV2Effect(vibrator), nullptr));
     EXPECT_OK(vibrator->off());
+}
+
+TEST_P(VibratorAidl, ComposePwleV2Unsupported) {
+    if (version < PWLE_V2_MIN_VERSION) {
+        EXPECT_EQ(capabilities & IVibrator::CAP_COMPOSE_PWLE_EFFECTS_V2, 0)
+                << "Vibrator version " << version << " should not report PWLE V2 capability.";
+    }
+    if (capabilities & IVibrator::CAP_COMPOSE_PWLE_EFFECTS_V2) return;
+
+    EXPECT_UNKNOWN_OR_UNSUPPORTED(
+            vibrator->composePwleV2(pwle_v2_utils::composeValidPwleV2Effect(vibrator), nullptr));
 }
 
 TEST_P(VibratorAidl, ComposeValidPwleV2EffectWithCallback) {
