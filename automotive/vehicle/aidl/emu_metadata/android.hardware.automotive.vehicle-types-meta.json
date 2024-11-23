@@ -1,81 +1,32 @@
 [
   {
-    "name": "VehicleApPowerStateReqIndex",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "LaneKeepAssistState",
     "values": [
       {
-        "name": "STATE",
+        "name": "OTHER",
         "value": 0
       },
       {
-        "name": "ADDITIONAL",
-        "value": 1
-      }
-    ]
-  },
-  {
-    "name": "EvChargeState",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "CHARGING",
+        "name": "ENABLED",
         "value": 1
       },
       {
-        "name": "FULLY_CHARGED",
+        "name": "ACTIVATED_STEER_LEFT",
         "value": 2
       },
       {
-        "name": "NOT_CHARGING",
+        "name": "ACTIVATED_STEER_RIGHT",
         "value": 3
       },
       {
-        "name": "ERROR",
+        "name": "USER_OVERRIDE",
         "value": 4
       }
     ]
   },
   {
-    "name": "TrailerState",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "NOT_PRESENT",
-        "value": 1
-      },
-      {
-        "name": "PRESENT",
-        "value": 2
-      },
-      {
-        "name": "ERROR",
-        "value": 3
-      }
-    ]
-  },
-  {
-    "name": "ProcessTerminationReason",
-    "values": [
-      {
-        "name": "NOT_RESPONDING",
-        "value": 1
-      },
-      {
-        "name": "IO_OVERUSE",
-        "value": 2
-      },
-      {
-        "name": "MEMORY_OVERUSE",
-        "value": 3
-      }
-    ]
-  },
-  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "VehicleApPowerStateConfigFlag",
     "values": [
       {
@@ -88,645 +39,12 @@
       },
       {
         "name": "ENABLE_HIBERNATION_FLAG",
-        "value": 3
-      }
-    ]
-  },
-  {
-    "name": "Obd2FuelType",
-    "values": [
-      {
-        "name": "NOT_AVAILABLE",
-        "value": 0
-      },
-      {
-        "name": "GASOLINE",
-        "value": 1
-      },
-      {
-        "name": "METHANOL",
-        "value": 2
-      },
-      {
-        "name": "ETHANOL",
-        "value": 3
-      },
-      {
-        "name": "DIESEL",
-        "value": 4
-      },
-      {
-        "name": "LPG",
-        "value": 5
-      },
-      {
-        "name": "CNG",
-        "value": 6
-      },
-      {
-        "name": "PROPANE",
-        "value": 7
-      },
-      {
-        "name": "ELECTRIC",
-        "value": 8
-      },
-      {
-        "name": "BIFUEL_RUNNING_GASOLINE",
-        "value": 9
-      },
-      {
-        "name": "BIFUEL_RUNNING_METHANOL",
-        "value": 10
-      },
-      {
-        "name": "BIFUEL_RUNNING_ETHANOL",
-        "value": 11
-      },
-      {
-        "name": "BIFUEL_RUNNING_LPG",
-        "value": 12
-      },
-      {
-        "name": "BIFUEL_RUNNING_CNG",
-        "value": 13
-      },
-      {
-        "name": "BIFUEL_RUNNING_PROPANE",
-        "value": 14
-      },
-      {
-        "name": "BIFUEL_RUNNING_ELECTRIC",
-        "value": 15
-      },
-      {
-        "name": "BIFUEL_RUNNING_ELECTRIC_AND_COMBUSTION",
-        "value": 16
-      },
-      {
-        "name": "HYBRID_GASOLINE",
-        "value": 17
-      },
-      {
-        "name": "HYBRID_ETHANOL",
-        "value": 18
-      },
-      {
-        "name": "HYBRID_DIESEL",
-        "value": 19
-      },
-      {
-        "name": "HYBRID_ELECTRIC",
-        "value": 20
-      },
-      {
-        "name": "HYBRID_RUNNING_ELECTRIC_AND_COMBUSTION",
-        "value": 21
-      },
-      {
-        "name": "HYBRID_REGENERATIVE",
-        "value": 22
-      },
-      {
-        "name": "BIFUEL_RUNNING_DIESEL",
-        "value": 23
-      }
-    ]
-  },
-  {
-    "name": "VmsSubscriptionsStateIntegerValuesIndex",
-    "values": [
-      {
-        "name": "MESSAGE_TYPE",
-        "value": 0
-      },
-      {
-        "name": "SEQUENCE_NUMBER",
-        "value": 1
-      },
-      {
-        "name": "NUMBER_OF_LAYERS",
-        "value": 2
-      },
-      {
-        "name": "NUMBER_OF_ASSOCIATED_LAYERS",
-        "value": 3
-      },
-      {
-        "name": "SUBSCRIPTIONS_START",
         "value": 4
       }
     ]
   },
   {
-    "name": "VehicleArea",
-    "values": [
-      {
-        "name": "GLOBAL",
-        "value": 16777216
-      },
-      {
-        "name": "WINDOW",
-        "value": 50331648
-      },
-      {
-        "name": "MIRROR",
-        "value": 67108864
-      },
-      {
-        "name": "SEAT",
-        "value": 83886080
-      },
-      {
-        "name": "DOOR",
-        "value": 100663296
-      },
-      {
-        "name": "WHEEL",
-        "value": 117440512
-      },
-      {
-        "name": "MASK",
-        "value": 251658240
-      }
-    ]
-  },
-  {
-    "name": "VehicleAreaWindow",
-    "values": [
-      {
-        "name": "FRONT_WINDSHIELD",
-        "value": 1
-      },
-      {
-        "name": "REAR_WINDSHIELD",
-        "value": 2
-      },
-      {
-        "name": "ROW_1_LEFT",
-        "value": 16
-      },
-      {
-        "name": "ROW_1_RIGHT",
-        "value": 64
-      },
-      {
-        "name": "ROW_2_LEFT",
-        "value": 256
-      },
-      {
-        "name": "ROW_2_RIGHT",
-        "value": 1024
-      },
-      {
-        "name": "ROW_3_LEFT",
-        "value": 4096
-      },
-      {
-        "name": "ROW_3_RIGHT",
-        "value": 16384
-      },
-      {
-        "name": "ROOF_TOP_1",
-        "value": 65536
-      },
-      {
-        "name": "ROOF_TOP_2",
-        "value": 131072
-      }
-    ]
-  },
-  {
-    "name": "ElectronicTollCollectionCardStatus",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "ELECTRONIC_TOLL_COLLECTION_CARD_VALID",
-        "value": 1
-      },
-      {
-        "name": "ELECTRONIC_TOLL_COLLECTION_CARD_INVALID",
-        "value": 2
-      },
-      {
-        "name": "ELECTRONIC_TOLL_COLLECTION_CARD_NOT_INSERTED",
-        "value": 3
-      }
-    ]
-  },
-  {
-    "name": "VehiclePropertyType",
-    "values": [
-      {
-        "name": "STRING",
-        "value": 1048576
-      },
-      {
-        "name": "BOOLEAN",
-        "value": 2097152
-      },
-      {
-        "name": "INT32",
-        "value": 4194304
-      },
-      {
-        "name": "INT32_VEC",
-        "value": 4259840
-      },
-      {
-        "name": "INT64",
-        "value": 5242880
-      },
-      {
-        "name": "INT64_VEC",
-        "value": 5308416
-      },
-      {
-        "name": "FLOAT",
-        "value": 6291456
-      },
-      {
-        "name": "FLOAT_VEC",
-        "value": 6356992
-      },
-      {
-        "name": "BYTES",
-        "value": 7340032
-      },
-      {
-        "name": "MIXED",
-        "value": 14680064
-      },
-      {
-        "name": "MASK",
-        "value": 16711680
-      }
-    ]
-  },
-  {
-    "name": "StatusCode",
-    "values": [
-      {
-        "name": "OK",
-        "value": 0
-      },
-      {
-        "name": "TRY_AGAIN",
-        "value": 1
-      },
-      {
-        "name": "INVALID_ARG",
-        "value": 2
-      },
-      {
-        "name": "NOT_AVAILABLE",
-        "value": 3
-      },
-      {
-        "name": "ACCESS_DENIED",
-        "value": 4
-      },
-      {
-        "name": "INTERNAL_ERROR",
-        "value": 5
-      }
-    ]
-  },
-  {
-    "name": "CreateUserStatus",
-    "values": [
-      {
-        "name": "SUCCESS",
-        "value": 1
-      },
-      {
-        "name": "FAILURE",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "name": "ElectronicTollCollectionCardType",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "JP_ELECTRONIC_TOLL_COLLECTION_CARD",
-        "value": 1
-      },
-      {
-        "name": "JP_ELECTRONIC_TOLL_COLLECTION_CARD_V2",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "name": "VehicleAreaMirror",
-    "values": [
-      {
-        "name": "DRIVER_LEFT",
-        "value": 1
-      },
-      {
-        "name": "DRIVER_RIGHT",
-        "value": 2
-      },
-      {
-        "name": "DRIVER_CENTER",
-        "value": 4
-      }
-    ]
-  },
-  {
-    "name": "InitialUserInfoResponseAction",
-    "values": [
-      {
-        "name": "DEFAULT",
-        "value": 0
-      },
-      {
-        "name": "SWITCH",
-        "value": 1
-      },
-      {
-        "name": "CREATE",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "name": "VehicleHvacFanDirection",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "FACE",
-        "value": 1
-      },
-      {
-        "name": "FLOOR",
-        "value": 2
-      },
-      {
-        "name": "FACE_AND_FLOOR",
-        "value": 3
-      },
-      {
-        "name": "DEFROST",
-        "value": 4
-      },
-      {
-        "name": "DEFROST_AND_FLOOR",
-        "value": 6
-      }
-    ]
-  },
-  {
-    "name": "Obd2SecondaryAirStatus",
-    "values": [
-      {
-        "name": "UPSTREAM",
-        "value": 1
-      },
-      {
-        "name": "DOWNSTREAM_OF_CATALYCIC_CONVERTER",
-        "value": 2
-      },
-      {
-        "name": "FROM_OUTSIDE_OR_OFF",
-        "value": 4
-      },
-      {
-        "name": "PUMP_ON_FOR_DIAGNOSTICS",
-        "value": 8
-      }
-    ]
-  },
-  {
-    "name": "VmsStartSessionMessageIntegerValuesIndex",
-    "values": [
-      {
-        "name": "MESSAGE_TYPE",
-        "value": 0
-      },
-      {
-        "name": "SERVICE_ID",
-        "value": 1
-      },
-      {
-        "name": "CLIENT_ID",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "name": "VehicleOilLevel",
-    "values": [
-      {
-        "name": "CRITICALLY_LOW",
-        "value": 0
-      },
-      {
-        "name": "LOW",
-        "value": 1
-      },
-      {
-        "name": "NORMAL",
-        "value": 2
-      },
-      {
-        "name": "HIGH",
-        "value": 3
-      },
-      {
-        "name": "ERROR",
-        "value": 4
-      }
-    ]
-  },
-  {
-    "name": "VehicleUnit",
-    "values": [
-      {
-        "name": "SHOULD_NOT_USE",
-        "value": 0
-      },
-      {
-        "name": "METER_PER_SEC",
-        "value": 1
-      },
-      {
-        "name": "RPM",
-        "value": 2
-      },
-      {
-        "name": "HERTZ",
-        "value": 3
-      },
-      {
-        "name": "PERCENTILE",
-        "value": 16
-      },
-      {
-        "name": "MILLIMETER",
-        "value": 32
-      },
-      {
-        "name": "METER",
-        "value": 33
-      },
-      {
-        "name": "KILOMETER",
-        "value": 35
-      },
-      {
-        "name": "MILE",
-        "value": 36
-      },
-      {
-        "name": "CELSIUS",
-        "value": 48
-      },
-      {
-        "name": "FAHRENHEIT",
-        "value": 49
-      },
-      {
-        "name": "KELVIN",
-        "value": 50
-      },
-      {
-        "name": "MILLILITER",
-        "value": 64
-      },
-      {
-        "name": "LITER",
-        "value": 65
-      },
-      {
-        "name": "GALLON",
-        "value": 66
-      },
-      {
-        "name": "US_GALLON",
-        "value": 66
-      },
-      {
-        "name": "IMPERIAL_GALLON",
-        "value": 67
-      },
-      {
-        "name": "NANO_SECS",
-        "value": 80
-      },
-      {
-        "name": "SECS",
-        "value": 83
-      },
-      {
-        "name": "YEAR",
-        "value": 89
-      },
-      {
-        "name": "WATT_HOUR",
-        "value": 96
-      },
-      {
-        "name": "MILLIAMPERE",
-        "value": 97
-      },
-      {
-        "name": "MILLIVOLT",
-        "value": 98
-      },
-      {
-        "name": "MILLIWATTS",
-        "value": 99
-      },
-      {
-        "name": "AMPERE_HOURS",
-        "value": 100
-      },
-      {
-        "name": "KILOWATT_HOUR",
-        "value": 101
-      },
-      {
-        "name": "AMPERE",
-        "value": 102
-      },
-      {
-        "name": "KILOPASCAL",
-        "value": 112
-      },
-      {
-        "name": "PSI",
-        "value": 113
-      },
-      {
-        "name": "BAR",
-        "value": 114
-      },
-      {
-        "name": "DEGREES",
-        "value": 128
-      },
-      {
-        "name": "MILES_PER_HOUR",
-        "value": 144
-      },
-      {
-        "name": "KILOMETERS_PER_HOUR",
-        "value": 145
-      }
-    ]
-  },
-  {
-    "name": "VehicleAreaWheel",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "LEFT_FRONT",
-        "value": 1
-      },
-      {
-        "name": "RIGHT_FRONT",
-        "value": 2
-      },
-      {
-        "name": "LEFT_REAR",
-        "value": 4
-      },
-      {
-        "name": "RIGHT_REAR",
-        "value": 8
-      }
-    ]
-  },
-  {
-    "name": "EvsServiceState",
-    "values": [
-      {
-        "name": "OFF",
-        "value": 0
-      },
-      {
-        "name": "ON",
-        "value": 1
-      }
-    ]
-  },
-  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "EvsServiceRequestIndex",
     "values": [
       {
@@ -740,23 +58,7 @@
     ]
   },
   {
-    "name": "VehicleSeatOccupancyState",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "VACANT",
-        "value": 1
-      },
-      {
-        "name": "OCCUPIED",
-        "value": 2
-      }
-    ]
-  },
-  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "VehicleProperty",
     "values": [
       {
@@ -796,14 +98,14 @@
         "unit": "VehicleUnit:MILLILITER"
       },
       {
-        "name": "List of fuels the vehicle may use",
+        "name": "List of fuels the vehicle may use.",
         "value": 289472773,
         "change_mode": "VehiclePropertyChangeMode:STATIC",
         "access": "VehiclePropertyAccess:READ",
         "data_enum": "FuelType"
       },
       {
-        "name": "INFO_EV_BATTERY_CAPACITY",
+        "name": "Nominal battery capacity for EV or hybrid vehicle",
         "value": 291504390,
         "change_mode": "VehiclePropertyChangeMode:STATIC",
         "access": "VehiclePropertyAccess:READ",
@@ -934,9 +236,16 @@
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
-        "name": "EV_BATTERY_LEVEL",
+        "name": "Battery level for EV or hybrid vehicle",
         "value": 291504905,
         "change_mode": "VehiclePropertyChangeMode:CONTINUOUS",
+        "access": "VehiclePropertyAccess:READ",
+        "unit": "VehicleUnit:WH"
+      },
+      {
+        "name": "Current battery capacity for EV or hybrid vehicle",
+        "value": 291504909,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ",
         "unit": "VehicleUnit:WH"
       },
@@ -981,6 +290,12 @@
         "unit": "VehicleUnit:KILOPASCAL"
       },
       {
+        "name": "Represents feature for engine idle automatic stop.",
+        "value": 287310624,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
         "name": "Currently selected gear",
         "value": 289408000,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
@@ -1005,6 +320,12 @@
         "value": 287310851,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ"
+      },
+      {
+        "name": "Regenerative braking level of a electronic vehicle",
+        "value": 289408012,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
         "name": "Warning for fuel low level.",
@@ -1045,8 +366,17 @@
         "access": "VehiclePropertyAccess:READ"
       },
       {
-        "name": "HVAC_FAN_SPEED",
-        "value": 356517120
+        "name": "Represents property for the current stopping mode of the vehicle.",
+        "value": 289408013,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE",
+        "data_enum": "EvStoppingMode"
+      },
+      {
+        "name": "HVAC Properties",
+        "value": 356517120,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
         "name": "Fan direction setting",
@@ -1224,7 +554,7 @@
         "name": "ANDROID_EPOCH_TIME",
         "value": 290457094,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
-        "access": "VehiclePropertyAccess:WRITE_ONLY",
+        "access": "VehiclePropertyAccess:WRITE",
         "unit": "VehicleUnit:MILLI_SECS"
       },
       {
@@ -1259,14 +589,34 @@
         "access": "VehiclePropertyAccess:READ"
       },
       {
-        "name": "DISPLAY_BRIGHTNESS",
+        "name": "Property to represent brightness of the display.",
         "value": 289409539,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Property to represent brightness of the displays which are controlled separately.",
+        "value": 289475076,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
         "name": "HW_KEY_INPUT",
         "value": 289475088,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "config_flags": ""
+      },
+      {
+        "name": "HW_KEY_INPUT_V2",
+        "value": 367004177,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "config_flags": ""
+      },
+      {
+        "name": "HW_MOTION_INPUT",
+        "value": 367004178,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ",
         "config_flags": ""
@@ -1304,6 +654,12 @@
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
+        "name": "Door child lock feature enabled",
+        "value": 371198723,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
         "name": "Mirror Z Position",
         "value": 339741504,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
@@ -1336,6 +692,18 @@
       {
         "name": "Mirror Fold",
         "value": 287312709,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Represents property for Mirror Auto Fold feature.",
+        "value": 337644358,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Represents property for Mirror Auto Tilt feature.",
+        "value": 337644359,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
@@ -1466,8 +834,14 @@
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
-        "name": "Headrest height position",
+        "name": "SEAT_HEADREST_HEIGHT_POS",
         "value": 289409941,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Headrest height position",
+        "value": 356518820,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
@@ -1502,6 +876,62 @@
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
+        "name": "Represents property for the seat footwell lights state.",
+        "value": 356518811,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "VehicleLightState"
+      },
+      {
+        "name": "Represents property for the seat footwell lights switch.",
+        "value": 356518812,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE",
+        "data_enum": "VehicleLightSwitch"
+      },
+      {
+        "name": "Represents property for Seat easy access feature.",
+        "value": 354421661,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "SEAT_AIRBAG_ENABLED",
+        "value": 354421662,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "SEAT_CUSHION_SIDE_SUPPORT_POS",
+        "value": 356518815,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Represents property for movement direction and speed of seat cushion side support.",
+        "value": 356518816,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "SEAT_LUMBAR_VERTICAL_POS",
+        "value": 356518817,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Represents property for vertical movement direction and speed of seat lumbar support.",
+        "value": 356518818,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "SEAT_WALK_IN_POS",
+        "value": 356518819,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
         "name": "Seat Occupancy",
         "value": 356518832,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
@@ -1527,10 +957,91 @@
         "access": "VehiclePropertyAccess:READ_WRITE"
       },
       {
+        "name": "WINDSHIELD_WIPERS_PERIOD",
+        "value": 322964421,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "unit": "VehicleUnit:MILLI_SECS"
+      },
+      {
+        "name": "Windshield wipers state.",
+        "value": 322964422,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "WindshieldWipersState"
+      },
+      {
+        "name": "Windshield wipers switch.",
+        "value": 322964423,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE",
+        "data_enum": "WindshieldWipersSwitch"
+      },
+      {
+        "name": "Steering wheel depth position",
+        "value": 289410016,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Steering wheel depth movement",
+        "value": 289410017,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Steering wheel height position",
+        "value": 289410018,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Steering wheel height movement",
+        "value": 289410019,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Steering wheel theft lock feature enabled",
+        "value": 287312868,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Steering wheel locked",
+        "value": 287312869,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Steering wheel easy access feature enabled",
+        "value": 287312870,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Property that represents the current position of the glove box door.",
+        "value": 356518896,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Lock or unlock the glove box.",
+        "value": 354421745,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
         "name": "VEHICLE_MAP_SERVICE",
         "value": 299895808,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Characterization of inputs used for computing location.",
+        "value": 289410064,
+        "change_mode": "VehiclePropertyChangeMode:STATIC",
+        "access": "VehiclePropertyAccess:READ"
       },
       {
         "name": "OBD2 Live Sensor Data",
@@ -1636,6 +1147,20 @@
       {
         "name": "Reading lights switch",
         "value": 356519684,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE",
+        "data_enum": "VehicleLightSwitch"
+      },
+      {
+        "name": "Steering wheel lights state",
+        "value": 289410828,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "VehicleLightState"
+      },
+      {
+        "name": "Steering wheel lights switch",
+        "value": 289410829,
         "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
         "access": "VehiclePropertyAccess:READ_WRITE",
         "data_enum": "VehicleLightSwitch"
@@ -1849,270 +1374,629 @@
         "change_mode": "VehiclePropertyChangeMode:STATIC",
         "access": "VehiclePropertyAccess:READ",
         "unit": "VehicleUnit:KILOGRAM"
+      },
+      {
+        "name": "GENERAL_SAFETY_REGULATION_COMPLIANCE_REQUIREMENT",
+        "value": 289410887,
+        "change_mode": "VehiclePropertyChangeMode:STATIC",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "GsrComplianceRequirementType"
+      },
+      {
+        "name": "SUPPORTED_PROPERTY_IDS",
+        "value": 289476424,
+        "change_mode": "VehiclePropertyChangeMode:STATIC",
+        "access": "VehiclePropertyAccess:READ"
+      },
+      {
+        "name": "Request the head unit to be shutdown.",
+        "value": 289410889,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:WRITE",
+        "data_enum": "VehicleApPowerStateShutdownParam"
+      },
+      {
+        "name": "Whether the vehicle is currently in use.",
+        "value": 287313738,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "Start of ADAS Properties",
+        "value": 287313920,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "AUTOMATIC_EMERGENCY_BRAKING_STATE",
+        "value": 289411073,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "FORWARD_COLLISION_WARNING_ENABLED",
+        "value": 287313922,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "FORWARD_COLLISION_WARNING_STATE",
+        "value": 289411075,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "BLIND_SPOT_WARNING_ENABLED",
+        "value": 287313924,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "BLIND_SPOT_WARNING_STATE",
+        "value": 339742725,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "LANE_DEPARTURE_WARNING_ENABLED",
+        "value": 287313926,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "LANE_DEPARTURE_WARNING_STATE",
+        "value": 289411079,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "LANE_KEEP_ASSIST_ENABLED",
+        "value": 287313928,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "LANE_KEEP_ASSIST_STATE",
+        "value": 289411081,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "LANE_CENTERING_ASSIST_ENABLED",
+        "value": 287313930,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "LANE_CENTERING_ASSIST_COMMAND",
+        "value": 289411083,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:WRITE",
+        "data_enum": "LaneCenteringAssistCommand"
+      },
+      {
+        "name": "LANE_CENTERING_ASSIST_STATE",
+        "value": 289411084,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "EMERGENCY_LANE_KEEP_ASSIST_ENABLED",
+        "value": 287313933
+      },
+      {
+        "name": "EMERGENCY_LANE_KEEP_ASSIST_STATE",
+        "value": 289411086,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "CRUISE_CONTROL_ENABLED",
+        "value": 287313935,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "CRUISE_CONTROL_TYPE",
+        "value": 289411088,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "CRUISE_CONTROL_STATE",
+        "value": 289411089,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "CRUISE_CONTROL_COMMAND",
+        "value": 289411090,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:WRITE",
+        "data_enum": "CruiseControlCommand"
+      },
+      {
+        "name": "CRUISE_CONTROL_TARGET_SPEED",
+        "value": 291508243,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "unit": "VehicleUnit:METER_PER_SEC"
+      },
+      {
+        "name": "ADAPTIVE_CRUISE_CONTROL_TARGET_TIME_GAP",
+        "value": 289411092,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE",
+        "unit": "VehicleUnit:MILLI_SECS"
+      },
+      {
+        "name": "ADAPTIVE_CRUISE_CONTROL_LEAD_VEHICLE_MEASURED_DISTANCE",
+        "value": 289411093,
+        "change_mode": "VehiclePropertyChangeMode:CONTINUOUS",
+        "access": "VehiclePropertyAccess:READ",
+        "unit": "VehicleUnit:MILLIMETER"
+      },
+      {
+        "name": "HANDS_ON_DETECTION_ENABLED",
+        "value": 287313942,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ_WRITE"
+      },
+      {
+        "name": "HANDS_ON_DETECTION_DRIVER_STATE",
+        "value": 289411095,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
+      },
+      {
+        "name": "HANDS_ON_DETECTION_WARNING",
+        "value": 289411096,
+        "change_mode": "VehiclePropertyChangeMode:ON_CHANGE",
+        "access": "VehiclePropertyAccess:READ",
+        "data_enum": "ErrorState"
       }
     ]
   },
   {
-    "name": "EvsServiceType",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "LaneDepartureWarningState",
     "values": [
       {
-        "name": "REARVIEW",
+        "name": "OTHER",
         "value": 0
       },
       {
-        "name": "SURROUNDVIEW",
-        "value": 1
-      }
-    ]
-  },
-  {
-    "name": "VehiclePropertyChangeMode",
-    "values": [
-      {
-        "name": "STATIC",
-        "value": 0
-      },
-      {
-        "name": "ON_CHANGE",
+        "name": "NO_WARNING",
         "value": 1
       },
       {
-        "name": "CONTINUOUS",
+        "name": "WARNING_LEFT",
         "value": 2
+      },
+      {
+        "name": "WARNING_RIGHT",
+        "value": 3
       }
     ]
   },
   {
-    "name": "Obd2CompressionIgnitionMonitors",
-    "values": []
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VmsMessageWithLayerAndPublisherIdIntegerValuesIndex",
+    "values": [
+      {
+        "name": "MESSAGE_TYPE",
+        "value": 0
+      },
+      {
+        "name": "LAYER_TYPE",
+        "value": 1
+      },
+      {
+        "name": "LAYER_SUBTYPE",
+        "value": 2
+      },
+      {
+        "name": "LAYER_VERSION",
+        "value": 3
+      },
+      {
+        "name": "PUBLISHER_ID",
+        "value": 4
+      }
+    ]
   },
   {
-    "name": "VehicleLightState",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "GsrComplianceRequirementType",
     "values": [
+      {
+        "name": "GSR_COMPLIANCE_NOT_REQUIRED",
+        "value": 0
+      },
+      {
+        "name": "GSR_COMPLIANCE_REQUIRED_V1",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VmsPublisherInformationIntegerValuesIndex",
+    "values": [
+      {
+        "name": "MESSAGE_TYPE",
+        "value": 0
+      },
+      {
+        "name": "PUBLISHER_ID",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "Obd2FuelType",
+    "values": [
+      {
+        "name": "NOT_AVAILABLE",
+        "value": 0
+      },
+      {
+        "name": "GASOLINE",
+        "value": 1
+      },
+      {
+        "name": "METHANOL",
+        "value": 2
+      },
+      {
+        "name": "ETHANOL",
+        "value": 3
+      },
+      {
+        "name": "DIESEL",
+        "value": 4
+      },
+      {
+        "name": "LPG",
+        "value": 5
+      },
+      {
+        "name": "CNG",
+        "value": 6
+      },
+      {
+        "name": "PROPANE",
+        "value": 7
+      },
+      {
+        "name": "ELECTRIC",
+        "value": 8
+      },
+      {
+        "name": "BIFUEL_RUNNING_GASOLINE",
+        "value": 9
+      },
+      {
+        "name": "BIFUEL_RUNNING_METHANOL",
+        "value": 10
+      },
+      {
+        "name": "BIFUEL_RUNNING_ETHANOL",
+        "value": 11
+      },
+      {
+        "name": "BIFUEL_RUNNING_LPG",
+        "value": 12
+      },
+      {
+        "name": "BIFUEL_RUNNING_CNG",
+        "value": 13
+      },
+      {
+        "name": "BIFUEL_RUNNING_PROPANE",
+        "value": 14
+      },
+      {
+        "name": "BIFUEL_RUNNING_ELECTRIC",
+        "value": 15
+      },
+      {
+        "name": "BIFUEL_RUNNING_ELECTRIC_AND_COMBUSTION",
+        "value": 16
+      },
+      {
+        "name": "HYBRID_GASOLINE",
+        "value": 17
+      },
+      {
+        "name": "HYBRID_ETHANOL",
+        "value": 18
+      },
+      {
+        "name": "HYBRID_DIESEL",
+        "value": 19
+      },
+      {
+        "name": "HYBRID_ELECTRIC",
+        "value": 20
+      },
+      {
+        "name": "HYBRID_RUNNING_ELECTRIC_AND_COMBUSTION",
+        "value": 21
+      },
+      {
+        "name": "HYBRID_REGENERATIVE",
+        "value": 22
+      },
+      {
+        "name": "BIFUEL_RUNNING_DIESEL",
+        "value": 23
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "WindshieldWipersState",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
       {
         "name": "OFF",
-        "value": 0
+        "value": 1
       },
       {
         "name": "ON",
-        "value": 1
+        "value": 2
       },
       {
-        "name": "DAYTIME_RUNNING",
-        "value": 2
+        "name": "SERVICE",
+        "value": 3
       }
     ]
   },
   {
-    "name": "SwitchUserMessageType",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleUnit",
     "values": [
       {
-        "name": "UNKNOWN",
+        "name": "SHOULD_NOT_USE",
         "value": 0
       },
       {
-        "name": "LEGACY_ANDROID_SWITCH",
+        "name": "METER_PER_SEC",
         "value": 1
       },
       {
-        "name": "ANDROID_SWITCH",
+        "name": "RPM",
         "value": 2
       },
       {
-        "name": "VEHICLE_RESPONSE",
+        "name": "HERTZ",
         "value": 3
       },
       {
-        "name": "VEHICLE_REQUEST",
-        "value": 4
+        "name": "PERCENTILE",
+        "value": 16
       },
       {
-        "name": "ANDROID_POST_SWITCH",
-        "value": 5
+        "name": "MILLIMETER",
+        "value": 32
+      },
+      {
+        "name": "METER",
+        "value": 33
+      },
+      {
+        "name": "KILOMETER",
+        "value": 35
+      },
+      {
+        "name": "MILE",
+        "value": 36
+      },
+      {
+        "name": "CELSIUS",
+        "value": 48
+      },
+      {
+        "name": "FAHRENHEIT",
+        "value": 49
+      },
+      {
+        "name": "KELVIN",
+        "value": 50
+      },
+      {
+        "name": "MILLILITER",
+        "value": 64
+      },
+      {
+        "name": "LITER",
+        "value": 65
+      },
+      {
+        "name": "GALLON",
+        "value": 66
+      },
+      {
+        "name": "US_GALLON",
+        "value": 66
+      },
+      {
+        "name": "IMPERIAL_GALLON",
+        "value": 67
+      },
+      {
+        "name": "NANO_SECS",
+        "value": 80
+      },
+      {
+        "name": "MILLI_SECS",
+        "value": 81
+      },
+      {
+        "name": "SECS",
+        "value": 83
+      },
+      {
+        "name": "YEAR",
+        "value": 89
+      },
+      {
+        "name": "WATT_HOUR",
+        "value": 96
+      },
+      {
+        "name": "MILLIAMPERE",
+        "value": 97
+      },
+      {
+        "name": "MILLIVOLT",
+        "value": 98
+      },
+      {
+        "name": "MILLIWATTS",
+        "value": 99
+      },
+      {
+        "name": "AMPERE_HOURS",
+        "value": 100
+      },
+      {
+        "name": "KILOWATT_HOUR",
+        "value": 101
+      },
+      {
+        "name": "AMPERE",
+        "value": 102
+      },
+      {
+        "name": "KILOPASCAL",
+        "value": 112
+      },
+      {
+        "name": "PSI",
+        "value": 113
+      },
+      {
+        "name": "BAR",
+        "value": 114
+      },
+      {
+        "name": "DEGREES",
+        "value": 128
+      },
+      {
+        "name": "MILES_PER_HOUR",
+        "value": 144
+      },
+      {
+        "name": "KILOMETERS_PER_HOUR",
+        "value": 145
       }
     ]
   },
   {
-    "name": "PortLocationType",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VmsOfferingMessageIntegerValuesIndex",
     "values": [
       {
-        "name": "UNKNOWN",
+        "name": "MESSAGE_TYPE",
         "value": 0
       },
       {
-        "name": "FRONT_LEFT",
+        "name": "PUBLISHER_ID",
         "value": 1
       },
       {
-        "name": "FRONT_RIGHT",
+        "name": "NUMBER_OF_OFFERS",
         "value": 2
       },
       {
-        "name": "REAR_RIGHT",
+        "name": "OFFERING_START",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleArea",
+    "values": [
+      {
+        "name": "GLOBAL",
+        "value": 16777216
+      },
+      {
+        "name": "WINDOW",
+        "value": 50331648
+      },
+      {
+        "name": "MIRROR",
+        "value": 67108864
+      },
+      {
+        "name": "SEAT",
+        "value": 83886080
+      },
+      {
+        "name": "DOOR",
+        "value": 100663296
+      },
+      {
+        "name": "WHEEL",
+        "value": 117440512
+      },
+      {
+        "name": "MASK",
+        "value": 251658240
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleApPowerStateShutdownParam",
+    "values": [
+      {
+        "name": "SHUTDOWN_IMMEDIATELY",
+        "value": 1
+      },
+      {
+        "name": "CAN_SLEEP",
+        "value": 2
+      },
+      {
+        "name": "SHUTDOWN_ONLY",
         "value": 3
       },
       {
-        "name": "REAR_LEFT",
+        "name": "SLEEP_IMMEDIATELY",
         "value": 4
       },
       {
-        "name": "FRONT",
+        "name": "HIBERNATE_IMMEDIATELY",
         "value": 5
       },
       {
-        "name": "REAR",
+        "name": "CAN_HIBERNATE",
         "value": 6
       }
     ]
   },
   {
-    "name": "VehiclePropertyStatus",
-    "values": [
-      {
-        "name": "AVAILABLE",
-        "value": 0
-      },
-      {
-        "name": "UNAVAILABLE",
-        "value": 1
-      },
-      {
-        "name": "ERROR",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "name": "VehicleDisplay",
-    "values": [
-      {
-        "name": "MAIN",
-        "value": 0
-      },
-      {
-        "name": "INSTRUMENT_CLUSTER",
-        "value": 1
-      }
-    ]
-  },
-  {
-    "name": "SwitchUserStatus",
-    "values": [
-      {
-        "name": "SUCCESS",
-        "value": 1
-      },
-      {
-        "name": "FAILURE",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "name": "InitialUserInfoRequestType",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "FIRST_BOOT",
-        "value": 1
-      },
-      {
-        "name": "FIRST_BOOT_AFTER_OTA",
-        "value": 2
-      },
-      {
-        "name": "COLD_BOOT",
-        "value": 3
-      },
-      {
-        "name": "RESUME",
-        "value": 4
-      }
-    ]
-  },
-  {
-    "name": "UserIdentificationAssociationSetValue",
-    "values": [
-      {
-        "name": "INVALID",
-        "value": 0
-      },
-      {
-        "name": "ASSOCIATE_CURRENT_USER",
-        "value": 1
-      },
-      {
-        "name": "DISASSOCIATE_CURRENT_USER",
-        "value": 2
-      },
-      {
-        "name": "DISASSOCIATE_ALL_USERS",
-        "value": 3
-      }
-    ]
-  },
-  {
-    "name": "VehicleAreaDoor",
-    "values": [
-      {
-        "name": "ROW_1_LEFT",
-        "value": 1
-      },
-      {
-        "name": "ROW_1_RIGHT",
-        "value": 4
-      },
-      {
-        "name": "ROW_2_LEFT",
-        "value": 16
-      },
-      {
-        "name": "ROW_2_RIGHT",
-        "value": 64
-      },
-      {
-        "name": "ROW_3_LEFT",
-        "value": 256
-      },
-      {
-        "name": "ROW_3_RIGHT",
-        "value": 1024
-      },
-      {
-        "name": "HOOD",
-        "value": 268435456
-      },
-      {
-        "name": "REAR",
-        "value": 536870912
-      }
-    ]
-  },
-  {
-    "name": "VehicleLightSwitch",
-    "values": [
-      {
-        "name": "OFF",
-        "value": 0
-      },
-      {
-        "name": "ON",
-        "value": 1
-      },
-      {
-        "name": "DAYTIME_RUNNING",
-        "value": 2
-      },
-      {
-        "name": "AUTOMATIC",
-        "value": 256
-      }
-    ]
-  },
-  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "VehicleGear",
     "values": [
       {
@@ -2174,6 +2058,199 @@
     ]
   },
   {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "UserIdentificationAssociationValue",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 1
+      },
+      {
+        "name": "ASSOCIATED_CURRENT_USER",
+        "value": 2
+      },
+      {
+        "name": "ASSOCIATED_ANOTHER_USER",
+        "value": 3
+      },
+      {
+        "name": "NOT_ASSOCIATED_ANY_USER",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleApPowerStateReq",
+    "values": [
+      {
+        "name": "ON",
+        "value": 0
+      },
+      {
+        "name": "SHUTDOWN_PREPARE",
+        "value": 1
+      },
+      {
+        "name": "CANCEL_SHUTDOWN",
+        "value": 2
+      },
+      {
+        "name": "FINISHED",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleAreaSeat",
+    "values": [
+      {
+        "name": "ROW_1_LEFT",
+        "value": 1
+      },
+      {
+        "name": "ROW_1_CENTER",
+        "value": 2
+      },
+      {
+        "name": "ROW_1_RIGHT",
+        "value": 4
+      },
+      {
+        "name": "ROW_2_LEFT",
+        "value": 16
+      },
+      {
+        "name": "ROW_2_CENTER",
+        "value": 32
+      },
+      {
+        "name": "ROW_2_RIGHT",
+        "value": 64
+      },
+      {
+        "name": "ROW_3_LEFT",
+        "value": 256
+      },
+      {
+        "name": "ROW_3_CENTER",
+        "value": 512
+      },
+      {
+        "name": "ROW_3_RIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "CruiseControlCommand",
+    "values": [
+      {
+        "name": "ACTIVATE",
+        "value": 1
+      },
+      {
+        "name": "SUSPEND",
+        "value": 2
+      },
+      {
+        "name": "INCREASE_TARGET_SPEED",
+        "value": 3
+      },
+      {
+        "name": "DECREASE_TARGET_SPEED",
+        "value": 4
+      },
+      {
+        "name": "INCREASE_TARGET_TIME_GAP",
+        "value": 5
+      },
+      {
+        "name": "DECREASE_TARGET_TIME_GAP",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "TrailerState",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "NOT_PRESENT",
+        "value": 1
+      },
+      {
+        "name": "PRESENT",
+        "value": 2
+      },
+      {
+        "name": "ERROR",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "CreateUserStatus",
+    "values": [
+      {
+        "name": "SUCCESS",
+        "value": 1
+      },
+      {
+        "name": "FAILURE",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "RotaryInputType",
+    "values": [
+      {
+        "name": "ROTARY_INPUT_TYPE_SYSTEM_NAVIGATION",
+        "value": 0
+      },
+      {
+        "name": "ROTARY_INPUT_TYPE_AUDIO_VOLUME",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleAreaWheel",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "LEFT_FRONT",
+        "value": 1
+      },
+      {
+        "name": "RIGHT_FRONT",
+        "value": 2
+      },
+      {
+        "name": "LEFT_REAR",
+        "value": 4
+      },
+      {
+        "name": "RIGHT_REAR",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "Obd2IgnitionMonitorKind",
     "values": [
       {
@@ -2187,6 +2264,562 @@
     ]
   },
   {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleApPowerBootupReason",
+    "values": [
+      {
+        "name": "USER_POWER_ON",
+        "value": 0
+      },
+      {
+        "name": "SYSTEM_USER_DETECTION",
+        "value": 1
+      },
+      {
+        "name": "SYSTEM_REMOTE_ACCESS",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "Obd2CompressionIgnitionMonitors",
+    "values": []
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "LaneCenteringAssistState",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "ENABLED",
+        "value": 1
+      },
+      {
+        "name": "ACTIVATION_REQUESTED",
+        "value": 2
+      },
+      {
+        "name": "ACTIVATED",
+        "value": 3
+      },
+      {
+        "name": "USER_OVERRIDE",
+        "value": 4
+      },
+      {
+        "name": "FORCED_DEACTIVATION_WARNING",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "Obd2SecondaryAirStatus",
+    "values": [
+      {
+        "name": "UPSTREAM",
+        "value": 1
+      },
+      {
+        "name": "DOWNSTREAM_OF_CATALYCIC_CONVERTER",
+        "value": 2
+      },
+      {
+        "name": "FROM_OUTSIDE_OR_OFF",
+        "value": 4
+      },
+      {
+        "name": "PUMP_ON_FOR_DIAGNOSTICS",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "SwitchUserStatus",
+    "values": [
+      {
+        "name": "SUCCESS",
+        "value": 1
+      },
+      {
+        "name": "FAILURE",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "FuelType",
+    "values": [
+      {
+        "name": "FUEL_TYPE_UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "FUEL_TYPE_UNLEADED",
+        "value": 1
+      },
+      {
+        "name": "FUEL_TYPE_LEADED",
+        "value": 2
+      },
+      {
+        "name": "FUEL_TYPE_DIESEL_1",
+        "value": 3
+      },
+      {
+        "name": "FUEL_TYPE_DIESEL_2",
+        "value": 4
+      },
+      {
+        "name": "FUEL_TYPE_BIODIESEL",
+        "value": 5
+      },
+      {
+        "name": "FUEL_TYPE_E85",
+        "value": 6
+      },
+      {
+        "name": "FUEL_TYPE_LPG",
+        "value": 7
+      },
+      {
+        "name": "FUEL_TYPE_CNG",
+        "value": 8
+      },
+      {
+        "name": "FUEL_TYPE_LNG",
+        "value": 9
+      },
+      {
+        "name": "FUEL_TYPE_ELECTRIC",
+        "value": 10
+      },
+      {
+        "name": "FUEL_TYPE_HYDROGEN",
+        "value": 11
+      },
+      {
+        "name": "FUEL_TYPE_OTHER",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "LocationCharacterization",
+    "values": [
+      {
+        "name": "PRIOR_LOCATIONS",
+        "value": 1
+      },
+      {
+        "name": "GYROSCOPE_FUSION",
+        "value": 2
+      },
+      {
+        "name": "ACCELEROMETER_FUSION",
+        "value": 4
+      },
+      {
+        "name": "COMPASS_FUSION",
+        "value": 8
+      },
+      {
+        "name": "WHEEL_SPEED_FUSION",
+        "value": 16
+      },
+      {
+        "name": "STEERING_ANGLE_FUSION",
+        "value": 32
+      },
+      {
+        "name": "CAR_SPEED_FUSION",
+        "value": 64
+      },
+      {
+        "name": "DEAD_RECKONED",
+        "value": 128
+      },
+      {
+        "name": "RAW_GNSS_ONLY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleHwKeyInputAction",
+    "values": [
+      {
+        "name": "ACTION_DOWN",
+        "value": 0
+      },
+      {
+        "name": "ACTION_UP",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "EvStoppingMode",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "CREEP",
+        "value": 1
+      },
+      {
+        "name": "ROLL",
+        "value": 2
+      },
+      {
+        "name": "HOLD",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "PortLocationType",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "FRONT_LEFT",
+        "value": 1
+      },
+      {
+        "name": "FRONT_RIGHT",
+        "value": 2
+      },
+      {
+        "name": "REAR_RIGHT",
+        "value": 3
+      },
+      {
+        "name": "REAR_LEFT",
+        "value": 4
+      },
+      {
+        "name": "FRONT",
+        "value": 5
+      },
+      {
+        "name": "REAR",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VmsSubscriptionsStateIntegerValuesIndex",
+    "values": [
+      {
+        "name": "MESSAGE_TYPE",
+        "value": 0
+      },
+      {
+        "name": "SEQUENCE_NUMBER",
+        "value": 1
+      },
+      {
+        "name": "NUMBER_OF_LAYERS",
+        "value": 2
+      },
+      {
+        "name": "NUMBER_OF_ASSOCIATED_LAYERS",
+        "value": 3
+      },
+      {
+        "name": "SUBSCRIPTIONS_START",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "EvConnectorType",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "IEC_TYPE_1_AC",
+        "value": 1
+      },
+      {
+        "name": "IEC_TYPE_2_AC",
+        "value": 2
+      },
+      {
+        "name": "IEC_TYPE_3_AC",
+        "value": 3
+      },
+      {
+        "name": "IEC_TYPE_4_DC",
+        "value": 4
+      },
+      {
+        "name": "IEC_TYPE_1_CCS_DC",
+        "value": 5
+      },
+      {
+        "name": "IEC_TYPE_2_CCS_DC",
+        "value": 6
+      },
+      {
+        "name": "TESLA_ROADSTER",
+        "value": 7
+      },
+      {
+        "name": "TESLA_HPWC",
+        "value": 8
+      },
+      {
+        "name": "TESLA_SUPERCHARGER",
+        "value": 9
+      },
+      {
+        "name": "GBT_AC",
+        "value": 10
+      },
+      {
+        "name": "GBT_DC",
+        "value": 11
+      },
+      {
+        "name": "OTHER",
+        "value": 101
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehiclePropertyGroup",
+    "values": [
+      {
+        "name": "SYSTEM",
+        "value": 268435456
+      },
+      {
+        "name": "VENDOR",
+        "value": 536870912
+      },
+      {
+        "name": "MASK",
+        "value": 4026531840
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleHwMotionToolType",
+    "values": [
+      {
+        "name": "TOOL_TYPE_UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "TOOL_TYPE_FINGER",
+        "value": 1
+      },
+      {
+        "name": "TOOL_TYPE_STYLUS",
+        "value": 2
+      },
+      {
+        "name": "TOOL_TYPE_MOUSE",
+        "value": 3
+      },
+      {
+        "name": "TOOL_TYPE_ERASER",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "InitialUserInfoRequestType",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "FIRST_BOOT",
+        "value": 1
+      },
+      {
+        "name": "FIRST_BOOT_AFTER_OTA",
+        "value": 2
+      },
+      {
+        "name": "COLD_BOOT",
+        "value": 3
+      },
+      {
+        "name": "RESUME",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleLightSwitch",
+    "values": [
+      {
+        "name": "OFF",
+        "value": 0
+      },
+      {
+        "name": "ON",
+        "value": 1
+      },
+      {
+        "name": "DAYTIME_RUNNING",
+        "value": 2
+      },
+      {
+        "name": "AUTOMATIC",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleTurnSignal",
+    "values": [
+      {
+        "name": "NONE",
+        "value": 0
+      },
+      {
+        "name": "RIGHT",
+        "value": 1
+      },
+      {
+        "name": "LEFT",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "EvChargeState",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "CHARGING",
+        "value": 1
+      },
+      {
+        "name": "FULLY_CHARGED",
+        "value": 2
+      },
+      {
+        "name": "NOT_CHARGING",
+        "value": 3
+      },
+      {
+        "name": "ERROR",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "EmergencyLaneKeepAssistState",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "ENABLED",
+        "value": 1
+      },
+      {
+        "name": "WARNING_LEFT",
+        "value": 2
+      },
+      {
+        "name": "WARNING_RIGHT",
+        "value": 3
+      },
+      {
+        "name": "ACTIVATED_STEER_LEFT",
+        "value": 4
+      },
+      {
+        "name": "ACTIVATED_STEER_RIGHT",
+        "value": 5
+      },
+      {
+        "name": "USER_OVERRIDE",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "EvsServiceType",
+    "values": [
+      {
+        "name": "REARVIEW",
+        "value": 0
+      },
+      {
+        "name": "SURROUNDVIEW",
+        "value": 1
+      },
+      {
+        "name": "FRONTVIEW",
+        "value": 2
+      },
+      {
+        "name": "LEFTVIEW",
+        "value": 3
+      },
+      {
+        "name": "RIGHTVIEW",
+        "value": 4
+      },
+      {
+        "name": "DRIVERVIEW",
+        "value": 5
+      },
+      {
+        "name": "FRONTPASSENGERSVIEW",
+        "value": 6
+      },
+      {
+        "name": "REARPASSENGERSVIEW",
+        "value": 7
+      },
+      {
+        "name": "USER_DEFINED",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "CustomInputType",
     "values": [
       {
@@ -2232,51 +2865,7 @@
     ]
   },
   {
-    "name": "VehicleApPowerStateReport",
-    "values": [
-      {
-        "name": "WAIT_FOR_VHAL",
-        "value": 1
-      },
-      {
-        "name": "DEEP_SLEEP_ENTRY",
-        "value": 2
-      },
-      {
-        "name": "DEEP_SLEEP_EXIT",
-        "value": 3
-      },
-      {
-        "name": "SHUTDOWN_POSTPONE",
-        "value": 4
-      },
-      {
-        "name": "SHUTDOWN_START",
-        "value": 5
-      },
-      {
-        "name": "ON",
-        "value": 6
-      },
-      {
-        "name": "SHUTDOWN_PREPARE",
-        "value": 7
-      },
-      {
-        "name": "SHUTDOWN_CANCELLED",
-        "value": 8
-      },
-      {
-        "name": "HIBERNATION_ENTRY",
-        "value": 9
-      },
-      {
-        "name": "HIBERNATION_EXIT",
-        "value": 10
-      }
-    ]
-  },
-  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "VmsMessageWithLayerIntegerValuesIndex",
     "values": [
       {
@@ -2298,44 +2887,125 @@
     ]
   },
   {
-    "name": "EvRegenerativeBrakingState",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleLightState",
     "values": [
       {
-        "name": "UNKNOWN",
+        "name": "OFF",
         "value": 0
       },
       {
-        "name": "DISABLED",
+        "name": "ON",
         "value": 1
       },
       {
-        "name": "PARTIALLY_ENABLED",
+        "name": "DAYTIME_RUNNING",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "ErrorState",
+    "values": [
+      {
+        "name": "OTHER_ERROR_STATE",
+        "value": -1
+      },
+      {
+        "name": "NOT_AVAILABLE_DISABLED",
+        "value": -2
+      },
+      {
+        "name": "NOT_AVAILABLE_SPEED_LOW",
+        "value": -3
+      },
+      {
+        "name": "NOT_AVAILABLE_SPEED_HIGH",
+        "value": -4
+      },
+      {
+        "name": "NOT_AVAILABLE_POOR_VISIBILITY",
+        "value": -5
+      },
+      {
+        "name": "NOT_AVAILABLE_SAFETY",
+        "value": -6
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "AutomaticEmergencyBrakingState",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "ENABLED",
+        "value": 1
+      },
+      {
+        "name": "ACTIVATED",
         "value": 2
       },
       {
-        "name": "FULLY_ENABLED",
+        "name": "USER_OVERRIDE",
         "value": 3
       }
     ]
   },
   {
-    "name": "VehiclePropertyGroup",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "CruiseControlState",
     "values": [
       {
-        "name": "SYSTEM",
-        "value": 268435456
+        "name": "OTHER",
+        "value": 0
       },
       {
-        "name": "VENDOR",
-        "value": 536870912
+        "name": "ENABLED",
+        "value": 1
       },
       {
-        "name": "MASK",
-        "value": 4026531840
+        "name": "ACTIVATED",
+        "value": 2
+      },
+      {
+        "name": "USER_OVERRIDE",
+        "value": 3
+      },
+      {
+        "name": "SUSPENDED",
+        "value": 4
+      },
+      {
+        "name": "FORCED_DEACTIVATION_WARNING",
+        "value": 5
       }
     ]
   },
   {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "HandsOnDetectionDriverState",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "HANDS_ON",
+        "value": 1
+      },
+      {
+        "name": "HANDS_OFF",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "VehicleIgnitionState",
     "values": [
       {
@@ -2365,173 +3035,7 @@
     ]
   },
   {
-    "name": "VehicleHwKeyInputAction",
-    "values": [
-      {
-        "name": "ACTION_DOWN",
-        "value": 0
-      },
-      {
-        "name": "ACTION_UP",
-        "value": 1
-      }
-    ]
-  },
-  {
-    "name": "DiagnosticIntegerSensorIndex",
-    "values": [
-      {
-        "name": "FUEL_SYSTEM_STATUS",
-        "value": 0
-      },
-      {
-        "name": "MALFUNCTION_INDICATOR_LIGHT_ON",
-        "value": 1
-      },
-      {
-        "name": "IGNITION_MONITORS_SUPPORTED",
-        "value": 2
-      },
-      {
-        "name": "IGNITION_SPECIFIC_MONITORS",
-        "value": 3
-      },
-      {
-        "name": "INTAKE_AIR_TEMPERATURE",
-        "value": 4
-      },
-      {
-        "name": "COMMANDED_SECONDARY_AIR_STATUS",
-        "value": 5
-      },
-      {
-        "name": "NUM_OXYGEN_SENSORS_PRESENT",
-        "value": 6
-      },
-      {
-        "name": "RUNTIME_SINCE_ENGINE_START",
-        "value": 7
-      },
-      {
-        "name": "DISTANCE_TRAVELED_WITH_MALFUNCTION_INDICATOR_LIGHT_ON",
-        "value": 8
-      },
-      {
-        "name": "WARMUPS_SINCE_CODES_CLEARED",
-        "value": 9
-      },
-      {
-        "name": "DISTANCE_TRAVELED_SINCE_CODES_CLEARED",
-        "value": 10
-      },
-      {
-        "name": "ABSOLUTE_BAROMETRIC_PRESSURE",
-        "value": 11
-      },
-      {
-        "name": "CONTROL_MODULE_VOLTAGE",
-        "value": 12
-      },
-      {
-        "name": "AMBIENT_AIR_TEMPERATURE",
-        "value": 13
-      },
-      {
-        "name": "TIME_WITH_MALFUNCTION_LIGHT_ON",
-        "value": 14
-      },
-      {
-        "name": "TIME_SINCE_TROUBLE_CODES_CLEARED",
-        "value": 15
-      },
-      {
-        "name": "MAX_FUEL_AIR_EQUIVALENCE_RATIO",
-        "value": 16
-      },
-      {
-        "name": "MAX_OXYGEN_SENSOR_VOLTAGE",
-        "value": 17
-      },
-      {
-        "name": "MAX_OXYGEN_SENSOR_CURRENT",
-        "value": 18
-      },
-      {
-        "name": "MAX_INTAKE_MANIFOLD_ABSOLUTE_PRESSURE",
-        "value": 19
-      },
-      {
-        "name": "MAX_AIR_FLOW_RATE_FROM_MASS_AIR_FLOW_SENSOR",
-        "value": 20
-      },
-      {
-        "name": "FUEL_TYPE",
-        "value": 21
-      },
-      {
-        "name": "FUEL_RAIL_ABSOLUTE_PRESSURE",
-        "value": 22
-      },
-      {
-        "name": "ENGINE_OIL_TEMPERATURE",
-        "value": 23
-      },
-      {
-        "name": "DRIVER_DEMAND_PERCENT_TORQUE",
-        "value": 24
-      },
-      {
-        "name": "ENGINE_ACTUAL_PERCENT_TORQUE",
-        "value": 25
-      },
-      {
-        "name": "ENGINE_REFERENCE_PERCENT_TORQUE",
-        "value": 26
-      },
-      {
-        "name": "ENGINE_PERCENT_TORQUE_DATA_IDLE",
-        "value": 27
-      },
-      {
-        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT1",
-        "value": 28
-      },
-      {
-        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT2",
-        "value": 29
-      },
-      {
-        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT3",
-        "value": 30
-      },
-      {
-        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT4",
-        "value": 31
-      }
-    ]
-  },
-  {
-    "name": "UserIdentificationAssociationValue",
-    "values": [
-      {
-        "name": "UNKNOWN",
-        "value": 1
-      },
-      {
-        "name": "ASSOCIATED_CURRENT_USER",
-        "value": 2
-      },
-      {
-        "name": "ASSOCIATED_ANOTHER_USER",
-        "value": 3
-      },
-      {
-        "name": "NOT_ASSOCIATED_ANY_USER",
-        "value": 4
-      }
-    ]
-  },
-  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "VmsBaseMessageIntegerValuesIndex",
     "values": [
       {
@@ -2541,6 +3045,7 @@
     ]
   },
   {
+    "package": "android.hardware.automotive.vehicle",
     "name": "DiagnosticFloatSensorIndex",
     "values": [
       {
@@ -2830,331 +3335,246 @@
     ]
   },
   {
-    "name": "VmsMessageWithLayerAndPublisherIdIntegerValuesIndex",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleOilLevel",
     "values": [
       {
-        "name": "MESSAGE_TYPE",
+        "name": "CRITICALLY_LOW",
         "value": 0
       },
       {
-        "name": "LAYER_TYPE",
+        "name": "LOW",
         "value": 1
       },
       {
-        "name": "LAYER_SUBTYPE",
+        "name": "NORMAL",
         "value": 2
       },
       {
-        "name": "LAYER_VERSION",
+        "name": "HIGH",
         "value": 3
       },
       {
-        "name": "PUBLISHER_ID",
+        "name": "ERROR",
         "value": 4
       }
     ]
   },
   {
-    "name": "FuelType",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleAreaMirror",
     "values": [
       {
-        "name": "FUEL_TYPE_UNKNOWN",
-        "value": 0
-      },
-      {
-        "name": "FUEL_TYPE_UNLEADED",
+        "name": "DRIVER_LEFT",
         "value": 1
       },
       {
-        "name": "FUEL_TYPE_LEADED",
+        "name": "DRIVER_RIGHT",
         "value": 2
       },
       {
-        "name": "FUEL_TYPE_DIESEL_1",
+        "name": "DRIVER_CENTER",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleHwMotionInputSource",
+    "values": [
+      {
+        "name": "SOURCE_UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "SOURCE_KEYBOARD",
+        "value": 1
+      },
+      {
+        "name": "SOURCE_DPAD",
+        "value": 2
+      },
+      {
+        "name": "SOURCE_GAMEPAD",
         "value": 3
       },
       {
-        "name": "FUEL_TYPE_DIESEL_2",
+        "name": "SOURCE_TOUCHSCREEN",
         "value": 4
       },
       {
-        "name": "FUEL_TYPE_BIODIESEL",
+        "name": "SOURCE_MOUSE",
         "value": 5
       },
       {
-        "name": "FUEL_TYPE_E85",
+        "name": "SOURCE_STYLUS",
         "value": 6
       },
       {
-        "name": "FUEL_TYPE_LPG",
+        "name": "SOURCE_BLUETOOTH_STYLUS",
         "value": 7
       },
       {
-        "name": "FUEL_TYPE_CNG",
+        "name": "SOURCE_TRACKBALL",
         "value": 8
       },
       {
-        "name": "FUEL_TYPE_LNG",
+        "name": "SOURCE_MOUSE_RELATIVE",
         "value": 9
       },
       {
-        "name": "FUEL_TYPE_ELECTRIC",
+        "name": "SOURCE_TOUCHPAD",
         "value": 10
       },
       {
-        "name": "FUEL_TYPE_HYDROGEN",
+        "name": "SOURCE_TOUCH_NAVIGATION",
         "value": 11
       },
       {
-        "name": "FUEL_TYPE_OTHER",
-        "value": 12
-      }
-    ]
-  },
-  {
-    "name": "VehicleApPowerStateReq",
-    "values": [
-      {
-        "name": "ON",
-        "value": 0
-      },
-      {
-        "name": "SHUTDOWN_PREPARE",
-        "value": 1
-      },
-      {
-        "name": "CANCEL_SHUTDOWN",
-        "value": 2
-      },
-      {
-        "name": "FINISHED",
-        "value": 3
-      }
-    ]
-  },
-  {
-    "name": "VmsMessageType",
-    "values": [
-      {
-        "name": "SUBSCRIBE",
-        "value": 1
-      },
-      {
-        "name": "SUBSCRIBE_TO_PUBLISHER",
-        "value": 2
-      },
-      {
-        "name": "UNSUBSCRIBE",
-        "value": 3
-      },
-      {
-        "name": "UNSUBSCRIBE_TO_PUBLISHER",
-        "value": 4
-      },
-      {
-        "name": "OFFERING",
-        "value": 5
-      },
-      {
-        "name": "AVAILABILITY_REQUEST",
-        "value": 6
-      },
-      {
-        "name": "SUBSCRIPTIONS_REQUEST",
-        "value": 7
-      },
-      {
-        "name": "AVAILABILITY_RESPONSE",
-        "value": 8
-      },
-      {
-        "name": "AVAILABILITY_CHANGE",
-        "value": 9
-      },
-      {
-        "name": "SUBSCRIPTIONS_RESPONSE",
-        "value": 10
-      },
-      {
-        "name": "SUBSCRIPTIONS_CHANGE",
-        "value": 11
-      },
-      {
-        "name": "DATA",
+        "name": "SOURCE_ROTARY_ENCODER",
         "value": 12
       },
       {
-        "name": "PUBLISHER_ID_REQUEST",
+        "name": "SOURCE_JOYSTICK",
         "value": 13
       },
       {
-        "name": "PUBLISHER_ID_RESPONSE",
+        "name": "SOURCE_HDMI",
         "value": 14
       },
       {
-        "name": "PUBLISHER_INFORMATION_REQUEST",
+        "name": "SOURCE_SENSOR",
         "value": 15
-      },
-      {
-        "name": "PUBLISHER_INFORMATION_RESPONSE",
-        "value": 16
-      },
-      {
-        "name": "START_SESSION",
-        "value": 17
       }
     ]
   },
   {
-    "name": "Obd2CommonIgnitionMonitors",
-    "values": []
-  },
-  {
-    "name": "UserIdentificationAssociationType",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "ProcessTerminationReason",
     "values": [
       {
-        "name": "INVALID",
-        "value": 0
-      },
-      {
-        "name": "KEY_FOB",
+        "name": "NOT_RESPONDING",
         "value": 1
       },
       {
-        "name": "CUSTOM_1",
-        "value": 101
+        "name": "IO_OVERUSE",
+        "value": 2
       },
       {
-        "name": "CUSTOM_2",
-        "value": 102
-      },
-      {
-        "name": "CUSTOM_3",
-        "value": 103
-      },
-      {
-        "name": "CUSTOM_4",
-        "value": 104
+        "name": "MEMORY_OVERUSE",
+        "value": 3
       }
     ]
   },
   {
-    "name": "EvConnectorType",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleHvacFanDirection",
     "values": [
       {
         "name": "UNKNOWN",
         "value": 0
       },
       {
-        "name": "IEC_TYPE_1_AC",
+        "name": "FACE",
         "value": 1
       },
       {
-        "name": "IEC_TYPE_2_AC",
+        "name": "FLOOR",
         "value": 2
       },
       {
-        "name": "IEC_TYPE_3_AC",
+        "name": "FACE_AND_FLOOR",
         "value": 3
       },
       {
-        "name": "IEC_TYPE_4_DC",
+        "name": "DEFROST",
         "value": 4
       },
       {
-        "name": "IEC_TYPE_1_CCS_DC",
-        "value": 5
-      },
-      {
-        "name": "IEC_TYPE_2_CCS_DC",
+        "name": "DEFROST_AND_FLOOR",
         "value": 6
-      },
-      {
-        "name": "TESLA_ROADSTER",
-        "value": 7
-      },
-      {
-        "name": "TESLA_HPWC",
-        "value": 8
-      },
-      {
-        "name": "TESLA_SUPERCHARGER",
-        "value": 9
-      },
-      {
-        "name": "GBT_AC",
-        "value": 10
-      },
-      {
-        "name": "GBT_DC",
-        "value": 11
-      },
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "CruiseControlType",
+    "values": [
       {
         "name": "OTHER",
-        "value": 101
-      }
-    ]
-  },
-  {
-    "name": "VehicleApPowerStateShutdownParam",
-    "values": [
-      {
-        "name": "SHUTDOWN_IMMEDIATELY",
-        "value": 1
-      },
-      {
-        "name": "CAN_SLEEP",
-        "value": 2
-      },
-      {
-        "name": "SHUTDOWN_ONLY",
-        "value": 3
-      },
-      {
-        "name": "SLEEP_IMMEDIATELY",
-        "value": 4
-      },
-      {
-        "name": "HIBERNATE_IMMEDIATELY",
-        "value": 5
-      },
-      {
-        "name": "CAN_HIBERNATE",
-        "value": 6
-      }
-    ]
-  },
-  {
-    "name": "VmsOfferingMessageIntegerValuesIndex",
-    "values": [
-      {
-        "name": "MESSAGE_TYPE",
         "value": 0
       },
       {
-        "name": "PUBLISHER_ID",
+        "name": "STANDARD",
         "value": 1
       },
       {
-        "name": "NUMBER_OF_OFFERS",
+        "name": "ADAPTIVE",
         "value": 2
       },
       {
-        "name": "OFFERING_START",
+        "name": "PREDICTIVE",
         "value": 3
       }
     ]
   },
   {
-    "name": "VehicleAreaSeat",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehiclePropertyType",
+    "values": [
+      {
+        "name": "STRING",
+        "value": 1048576
+      },
+      {
+        "name": "BOOLEAN",
+        "value": 2097152
+      },
+      {
+        "name": "INT32",
+        "value": 4194304
+      },
+      {
+        "name": "INT32_VEC",
+        "value": 4259840
+      },
+      {
+        "name": "INT64",
+        "value": 5242880
+      },
+      {
+        "name": "INT64_VEC",
+        "value": 5308416
+      },
+      {
+        "name": "FLOAT",
+        "value": 6291456
+      },
+      {
+        "name": "FLOAT_VEC",
+        "value": 6356992
+      },
+      {
+        "name": "BYTES",
+        "value": 7340032
+      },
+      {
+        "name": "MIXED",
+        "value": 14680064
+      },
+      {
+        "name": "MASK",
+        "value": 16711680
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleAreaDoor",
     "values": [
       {
         "name": "ROW_1_LEFT",
         "value": 1
-      },
-      {
-        "name": "ROW_1_CENTER",
-        "value": 2
       },
       {
         "name": "ROW_1_RIGHT",
@@ -3165,10 +3585,6 @@
         "value": 16
       },
       {
-        "name": "ROW_2_CENTER",
-        "value": 32
-      },
-      {
         "name": "ROW_2_RIGHT",
         "value": 64
       },
@@ -3177,16 +3593,283 @@
         "value": 256
       },
       {
-        "name": "ROW_3_CENTER",
-        "value": 512
-      },
-      {
         "name": "ROW_3_RIGHT",
         "value": 1024
+      },
+      {
+        "name": "HOOD",
+        "value": 268435456
+      },
+      {
+        "name": "REAR",
+        "value": 536870912
       }
     ]
   },
   {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleAreaWindow",
+    "values": [
+      {
+        "name": "FRONT_WINDSHIELD",
+        "value": 1
+      },
+      {
+        "name": "REAR_WINDSHIELD",
+        "value": 2
+      },
+      {
+        "name": "ROW_1_LEFT",
+        "value": 16
+      },
+      {
+        "name": "ROW_1_RIGHT",
+        "value": 64
+      },
+      {
+        "name": "ROW_2_LEFT",
+        "value": 256
+      },
+      {
+        "name": "ROW_2_RIGHT",
+        "value": 1024
+      },
+      {
+        "name": "ROW_3_LEFT",
+        "value": 4096
+      },
+      {
+        "name": "ROW_3_RIGHT",
+        "value": 16384
+      },
+      {
+        "name": "ROOF_TOP_1",
+        "value": 65536
+      },
+      {
+        "name": "ROOF_TOP_2",
+        "value": 131072
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "HandsOnDetectionWarning",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "NO_WARNING",
+        "value": 1
+      },
+      {
+        "name": "WARNING",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "ForwardCollisionWarningState",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "NO_WARNING",
+        "value": 1
+      },
+      {
+        "name": "WARNING",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "DiagnosticIntegerSensorIndex",
+    "values": [
+      {
+        "name": "FUEL_SYSTEM_STATUS",
+        "value": 0
+      },
+      {
+        "name": "MALFUNCTION_INDICATOR_LIGHT_ON",
+        "value": 1
+      },
+      {
+        "name": "IGNITION_MONITORS_SUPPORTED",
+        "value": 2
+      },
+      {
+        "name": "IGNITION_SPECIFIC_MONITORS",
+        "value": 3
+      },
+      {
+        "name": "INTAKE_AIR_TEMPERATURE",
+        "value": 4
+      },
+      {
+        "name": "COMMANDED_SECONDARY_AIR_STATUS",
+        "value": 5
+      },
+      {
+        "name": "NUM_OXYGEN_SENSORS_PRESENT",
+        "value": 6
+      },
+      {
+        "name": "RUNTIME_SINCE_ENGINE_START",
+        "value": 7
+      },
+      {
+        "name": "DISTANCE_TRAVELED_WITH_MALFUNCTION_INDICATOR_LIGHT_ON",
+        "value": 8
+      },
+      {
+        "name": "WARMUPS_SINCE_CODES_CLEARED",
+        "value": 9
+      },
+      {
+        "name": "DISTANCE_TRAVELED_SINCE_CODES_CLEARED",
+        "value": 10
+      },
+      {
+        "name": "ABSOLUTE_BAROMETRIC_PRESSURE",
+        "value": 11
+      },
+      {
+        "name": "CONTROL_MODULE_VOLTAGE",
+        "value": 12
+      },
+      {
+        "name": "AMBIENT_AIR_TEMPERATURE",
+        "value": 13
+      },
+      {
+        "name": "TIME_WITH_MALFUNCTION_LIGHT_ON",
+        "value": 14
+      },
+      {
+        "name": "TIME_SINCE_TROUBLE_CODES_CLEARED",
+        "value": 15
+      },
+      {
+        "name": "MAX_FUEL_AIR_EQUIVALENCE_RATIO",
+        "value": 16
+      },
+      {
+        "name": "MAX_OXYGEN_SENSOR_VOLTAGE",
+        "value": 17
+      },
+      {
+        "name": "MAX_OXYGEN_SENSOR_CURRENT",
+        "value": 18
+      },
+      {
+        "name": "MAX_INTAKE_MANIFOLD_ABSOLUTE_PRESSURE",
+        "value": 19
+      },
+      {
+        "name": "MAX_AIR_FLOW_RATE_FROM_MASS_AIR_FLOW_SENSOR",
+        "value": 20
+      },
+      {
+        "name": "FUEL_TYPE",
+        "value": 21
+      },
+      {
+        "name": "FUEL_RAIL_ABSOLUTE_PRESSURE",
+        "value": 22
+      },
+      {
+        "name": "ENGINE_OIL_TEMPERATURE",
+        "value": 23
+      },
+      {
+        "name": "DRIVER_DEMAND_PERCENT_TORQUE",
+        "value": 24
+      },
+      {
+        "name": "ENGINE_ACTUAL_PERCENT_TORQUE",
+        "value": 25
+      },
+      {
+        "name": "ENGINE_REFERENCE_PERCENT_TORQUE",
+        "value": 26
+      },
+      {
+        "name": "ENGINE_PERCENT_TORQUE_DATA_IDLE",
+        "value": 27
+      },
+      {
+        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT1",
+        "value": 28
+      },
+      {
+        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT2",
+        "value": 29
+      },
+      {
+        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT3",
+        "value": 30
+      },
+      {
+        "name": "ENGINE_PERCENT_TORQUE_DATA_POINT4",
+        "value": 31
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleApPowerStateReport",
+    "values": [
+      {
+        "name": "WAIT_FOR_VHAL",
+        "value": 1
+      },
+      {
+        "name": "DEEP_SLEEP_ENTRY",
+        "value": 2
+      },
+      {
+        "name": "DEEP_SLEEP_EXIT",
+        "value": 3
+      },
+      {
+        "name": "SHUTDOWN_POSTPONE",
+        "value": 4
+      },
+      {
+        "name": "SHUTDOWN_START",
+        "value": 5
+      },
+      {
+        "name": "ON",
+        "value": 6
+      },
+      {
+        "name": "SHUTDOWN_PREPARE",
+        "value": 7
+      },
+      {
+        "name": "SHUTDOWN_CANCELLED",
+        "value": 8
+      },
+      {
+        "name": "HIBERNATION_ENTRY",
+        "value": 9
+      },
+      {
+        "name": "HIBERNATION_EXIT",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "VehicleVendorPermission",
     "values": [
       {
@@ -3344,95 +4027,169 @@
     ]
   },
   {
-    "name": "VehiclePropertyAccess",
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VmsMessageType",
     "values": [
       {
-        "name": "NONE",
-        "value": 0
-      },
-      {
-        "name": "READ",
+        "name": "SUBSCRIBE",
         "value": 1
       },
       {
-        "name": "WRITE",
+        "name": "SUBSCRIBE_TO_PUBLISHER",
         "value": 2
       },
       {
-        "name": "READ_WRITE",
+        "name": "UNSUBSCRIBE",
+        "value": 3
+      },
+      {
+        "name": "UNSUBSCRIBE_TO_PUBLISHER",
+        "value": 4
+      },
+      {
+        "name": "OFFERING",
+        "value": 5
+      },
+      {
+        "name": "AVAILABILITY_REQUEST",
+        "value": 6
+      },
+      {
+        "name": "SUBSCRIPTIONS_REQUEST",
+        "value": 7
+      },
+      {
+        "name": "AVAILABILITY_RESPONSE",
+        "value": 8
+      },
+      {
+        "name": "AVAILABILITY_CHANGE",
+        "value": 9
+      },
+      {
+        "name": "SUBSCRIPTIONS_RESPONSE",
+        "value": 10
+      },
+      {
+        "name": "SUBSCRIPTIONS_CHANGE",
+        "value": 11
+      },
+      {
+        "name": "DATA",
+        "value": 12
+      },
+      {
+        "name": "PUBLISHER_ID_REQUEST",
+        "value": 13
+      },
+      {
+        "name": "PUBLISHER_ID_RESPONSE",
+        "value": 14
+      },
+      {
+        "name": "PUBLISHER_INFORMATION_REQUEST",
+        "value": 15
+      },
+      {
+        "name": "PUBLISHER_INFORMATION_RESPONSE",
+        "value": 16
+      },
+      {
+        "name": "START_SESSION",
+        "value": 17
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "WindshieldWipersSwitch",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "OFF",
+        "value": 1
+      },
+      {
+        "name": "MIST",
+        "value": 2
+      },
+      {
+        "name": "INTERMITTENT_LEVEL_1",
+        "value": 3
+      },
+      {
+        "name": "INTERMITTENT_LEVEL_2",
+        "value": 4
+      },
+      {
+        "name": "INTERMITTENT_LEVEL_3",
+        "value": 5
+      },
+      {
+        "name": "INTERMITTENT_LEVEL_4",
+        "value": 6
+      },
+      {
+        "name": "INTERMITTENT_LEVEL_5",
+        "value": 7
+      },
+      {
+        "name": "CONTINUOUS_LEVEL_1",
+        "value": 8
+      },
+      {
+        "name": "CONTINUOUS_LEVEL_2",
+        "value": 9
+      },
+      {
+        "name": "CONTINUOUS_LEVEL_3",
+        "value": 10
+      },
+      {
+        "name": "CONTINUOUS_LEVEL_4",
+        "value": 11
+      },
+      {
+        "name": "CONTINUOUS_LEVEL_5",
+        "value": 12
+      },
+      {
+        "name": "AUTO",
+        "value": 13
+      },
+      {
+        "name": "SERVICE",
+        "value": 14
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "EvRegenerativeBrakingState",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "DISABLED",
+        "value": 1
+      },
+      {
+        "name": "PARTIALLY_ENABLED",
+        "value": 2
+      },
+      {
+        "name": "FULLY_ENABLED",
         "value": 3
       }
     ]
   },
   {
-    "name": "VmsAvailabilityStateIntegerValuesIndex",
-    "values": [
-      {
-        "name": "MESSAGE_TYPE",
-        "value": 0
-      },
-      {
-        "name": "SEQUENCE_NUMBER",
-        "value": 1
-      },
-      {
-        "name": "NUMBER_OF_ASSOCIATED_LAYERS",
-        "value": 2
-      },
-      {
-        "name": "LAYERS_START",
-        "value": 3
-      }
-    ]
-  },
-  {
-    "name": "Obd2SparkIgnitionMonitors",
-    "values": []
-  },
-  {
-    "name": "VehicleTurnSignal",
-    "values": [
-      {
-        "name": "NONE",
-        "value": 0
-      },
-      {
-        "name": "RIGHT",
-        "value": 1
-      },
-      {
-        "name": "LEFT",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "name": "VmsPublisherInformationIntegerValuesIndex",
-    "values": [
-      {
-        "name": "MESSAGE_TYPE",
-        "value": 0
-      },
-      {
-        "name": "PUBLISHER_ID",
-        "value": 1
-      }
-    ]
-  },
-  {
-    "name": "RotaryInputType",
-    "values": [
-      {
-        "name": "ROTARY_INPUT_TYPE_SYSTEM_NAVIGATION",
-        "value": 0
-      },
-      {
-        "name": "ROTARY_INPUT_TYPE_AUDIO_VOLUME",
-        "value": 1
-      }
-    ]
-  },
-  {
+    "package": "android.hardware.automotive.vehicle",
     "name": "Obd2FuelSystemStatus",
     "values": [
       {
@@ -3454,6 +4211,392 @@
       {
         "name": "CLOSED_LOOP_BUT_FEEDBACK_FAULT",
         "value": 16
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleHwMotionButtonStateFlag",
+    "values": [
+      {
+        "name": "BUTTON_PRIMARY",
+        "value": 1
+      },
+      {
+        "name": "BUTTON_SECONDARY",
+        "value": 2
+      },
+      {
+        "name": "BUTTON_TERTIARY",
+        "value": 4
+      },
+      {
+        "name": "BUTTON_BACK",
+        "value": 8
+      },
+      {
+        "name": "BUTTON_FORWARD",
+        "value": 16
+      },
+      {
+        "name": "BUTTON_STYLUS_PRIMARY",
+        "value": 32
+      },
+      {
+        "name": "BUTTON_STYLUS_SECONDARY",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "Obd2CommonIgnitionMonitors",
+    "values": []
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "BlindSpotWarningState",
+    "values": [
+      {
+        "name": "OTHER",
+        "value": 0
+      },
+      {
+        "name": "NO_WARNING",
+        "value": 1
+      },
+      {
+        "name": "WARNING",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleApPowerStateReqIndex",
+    "values": [
+      {
+        "name": "STATE",
+        "value": 0
+      },
+      {
+        "name": "ADDITIONAL",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "Obd2SparkIgnitionMonitors",
+    "values": []
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "UserIdentificationAssociationType",
+    "values": [
+      {
+        "name": "INVALID",
+        "value": 0
+      },
+      {
+        "name": "KEY_FOB",
+        "value": 1
+      },
+      {
+        "name": "CUSTOM_1",
+        "value": 101
+      },
+      {
+        "name": "CUSTOM_2",
+        "value": 102
+      },
+      {
+        "name": "CUSTOM_3",
+        "value": 103
+      },
+      {
+        "name": "CUSTOM_4",
+        "value": 104
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleSeatOccupancyState",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "VACANT",
+        "value": 1
+      },
+      {
+        "name": "OCCUPIED",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "UserIdentificationAssociationSetValue",
+    "values": [
+      {
+        "name": "INVALID",
+        "value": 0
+      },
+      {
+        "name": "ASSOCIATE_CURRENT_USER",
+        "value": 1
+      },
+      {
+        "name": "DISASSOCIATE_CURRENT_USER",
+        "value": 2
+      },
+      {
+        "name": "DISASSOCIATE_ALL_USERS",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "InitialUserInfoResponseAction",
+    "values": [
+      {
+        "name": "DEFAULT",
+        "value": 0
+      },
+      {
+        "name": "SWITCH",
+        "value": 1
+      },
+      {
+        "name": "CREATE",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "LaneCenteringAssistCommand",
+    "values": [
+      {
+        "name": "ACTIVATE",
+        "value": 1
+      },
+      {
+        "name": "DEACTIVATE",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VmsStartSessionMessageIntegerValuesIndex",
+    "values": [
+      {
+        "name": "MESSAGE_TYPE",
+        "value": 0
+      },
+      {
+        "name": "SERVICE_ID",
+        "value": 1
+      },
+      {
+        "name": "CLIENT_ID",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VmsAvailabilityStateIntegerValuesIndex",
+    "values": [
+      {
+        "name": "MESSAGE_TYPE",
+        "value": 0
+      },
+      {
+        "name": "SEQUENCE_NUMBER",
+        "value": 1
+      },
+      {
+        "name": "NUMBER_OF_ASSOCIATED_LAYERS",
+        "value": 2
+      },
+      {
+        "name": "LAYERS_START",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleDisplay",
+    "values": [
+      {
+        "name": "MAIN",
+        "value": 0
+      },
+      {
+        "name": "INSTRUMENT_CLUSTER",
+        "value": 1
+      },
+      {
+        "name": "HUD",
+        "value": 2
+      },
+      {
+        "name": "INPUT",
+        "value": 3
+      },
+      {
+        "name": "AUXILIARY",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "EvsServiceState",
+    "values": [
+      {
+        "name": "OFF",
+        "value": 0
+      },
+      {
+        "name": "ON",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "VehicleHwMotionInputAction",
+    "values": [
+      {
+        "name": "ACTION_DOWN",
+        "value": 0
+      },
+      {
+        "name": "ACTION_UP",
+        "value": 1
+      },
+      {
+        "name": "ACTION_MOVE",
+        "value": 2
+      },
+      {
+        "name": "ACTION_CANCEL",
+        "value": 3
+      },
+      {
+        "name": "ACTION_OUTSIDE",
+        "value": 4
+      },
+      {
+        "name": "ACTION_POINTER_DOWN",
+        "value": 5
+      },
+      {
+        "name": "ACTION_POINTER_UP",
+        "value": 6
+      },
+      {
+        "name": "ACTION_HOVER_MOVE",
+        "value": 7
+      },
+      {
+        "name": "ACTION_SCROLL",
+        "value": 8
+      },
+      {
+        "name": "ACTION_HOVER_ENTER",
+        "value": 9
+      },
+      {
+        "name": "ACTION_HOVER_EXIT",
+        "value": 10
+      },
+      {
+        "name": "ACTION_BUTTON_PRESS",
+        "value": 11
+      },
+      {
+        "name": "ACTION_BUTTON_RELEASE",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "ElectronicTollCollectionCardStatus",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "ELECTRONIC_TOLL_COLLECTION_CARD_VALID",
+        "value": 1
+      },
+      {
+        "name": "ELECTRONIC_TOLL_COLLECTION_CARD_INVALID",
+        "value": 2
+      },
+      {
+        "name": "ELECTRONIC_TOLL_COLLECTION_CARD_NOT_INSERTED",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "SwitchUserMessageType",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "LEGACY_ANDROID_SWITCH",
+        "value": 1
+      },
+      {
+        "name": "ANDROID_SWITCH",
+        "value": 2
+      },
+      {
+        "name": "VEHICLE_RESPONSE",
+        "value": 3
+      },
+      {
+        "name": "VEHICLE_REQUEST",
+        "value": 4
+      },
+      {
+        "name": "ANDROID_POST_SWITCH",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "package": "android.hardware.automotive.vehicle",
+    "name": "ElectronicTollCollectionCardType",
+    "values": [
+      {
+        "name": "UNKNOWN",
+        "value": 0
+      },
+      {
+        "name": "JP_ELECTRONIC_TOLL_COLLECTION_CARD",
+        "value": 1
+      },
+      {
+        "name": "JP_ELECTRONIC_TOLL_COLLECTION_CARD_V2",
+        "value": 2
       }
     ]
   }
