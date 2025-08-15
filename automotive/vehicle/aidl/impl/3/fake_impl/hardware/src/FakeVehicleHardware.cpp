@@ -36,6 +36,8 @@
 #include <utils/SystemClock.h>
 #include <utils/Trace.h>
 
+#include "NeoPixelHal.hpp"
+
 #include <dirent.h>
 #include <inttypes.h>
 #include <sys/types.h>
@@ -1165,6 +1167,41 @@ VhalResult<void> FakeVehicleHardware::maybeSetSpecialValue(const VehiclePropValu
                        << "while on a standard CC setting";
             }
             return {};
+        case toInt(TestVendorProperty::VENDOR_EXTENSION_LED_STRIP_CONTROL_PROPERTY): {
+                *isSpecialValue = true;
+                int32_t ledStripValue = value.value.int32Values[0];
+
+                // Unpack RGB values from packed int
+                uint8_t red = ledStripValue & 0xFF;
+                uint8_t green = (ledStripValue >> 8) & 0xFF;
+                uint8_t blue = (ledStripValue >> 16) & 0xFF;
+                uint8_t brightness = (ledStripValue >> 24) & 0xFF;
+                ALOGD("Unpacked RGB -> R: %u, G: %u, B: %u, Brightness: %u", red, green, blue, brightness);
+                static NeoPixelHal neoPixel("/dev/spidev0.0", 8); 
+
+                neoPixel.stopThreads();
+                neoPixel.setBrightness(brightness);
+                for (uint32_t i = 0; i < 8; ++i) {
+                    neoPixel.setColor(i, red, green, blue);
+                }
+                if (!neoPixel.show()) {
+                    ALOGE("Failed to show color on LED strip");
+                }
+
+                return {};
+            }
+        case toInt(TestVendorProperty::VENDOR_EXTENSION_TEST_INT_PROPERTY): {
+                
+                (*isSpecialValue) = true; 
+
+
+                if (mOnPropertyChangeCallback) {
+                    (*mOnPropertyChangeCallback)(std::vector<VehiclePropValue>{*(mValuePool->obtainInt32(10))});
+                }
+            
+                return{};
+
+        }
         }
 
 #ifdef ENABLE_VEHICLE_HAL_TEST_PROPERTIES
