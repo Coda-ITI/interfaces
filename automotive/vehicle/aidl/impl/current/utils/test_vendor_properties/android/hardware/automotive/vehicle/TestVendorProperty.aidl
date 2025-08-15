@@ -142,4 +142,9 @@ enum TestVendorProperty {
      * VehiclePropertyGroup.VENDOR | VehicleArea.GLOBAL | VehiclePropertyGroup.STRING
      */
     VENDOR_EXTENSION_STRING_PROPERTY = 0x103 + 0x20000000 + 0x01000000 + 0x00100000,
+    /**
+     * VehiclePropertyGroup.VENDOR | VehicleArea.GLOBAL | VehiclePropertyGroup.INT32
+     * ID = 557842693
+     */
+    VENDOR_EXTENSION_TEST_INT_PROPERTY = 0x105 + 0x20000000 + 0x01000000 + 0x00400000,
 }
