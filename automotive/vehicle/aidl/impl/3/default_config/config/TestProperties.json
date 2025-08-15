@@ -214,6 +214,16 @@
                 ]
             },
              "changeMode": "VehiclePropertyChangeMode::ON_CHANGE"
+        },
+        {
+            "property": "TestVendorProperty::VENDOR_EXTENSION_LED_STRIP_CONTROL_PROPERTY",
+            "access": "VehiclePropertyAccess::READ_WRITE",
+            "defaultValue": {
+                "int32Values": [
+                    0
+                ]
+            },
+             "changeMode": "VehiclePropertyChangeMode::ON_CHANGE"
         }
     ]
 }
