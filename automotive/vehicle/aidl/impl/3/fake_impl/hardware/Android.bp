@@ -63,6 +63,7 @@ cc_defaults {
         "libgrpc++",
         "libjsoncpp",
         "libprotobuf-cpp-full",
+        "libambientlight",
     ],
     export_static_lib_headers: ["VehicleHalUtils-V3"],
 }
