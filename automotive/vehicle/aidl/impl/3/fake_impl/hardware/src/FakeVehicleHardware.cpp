@@ -1194,11 +1194,14 @@ VhalResult<void> FakeVehicleHardware::maybeSetSpecialValue(const VehiclePropValu
                 
                 (*isSpecialValue) = true; 
 
+                 std::thread([this]() {
 
                 if (mOnPropertyChangeCallback) {
                     (*mOnPropertyChangeCallback)(std::vector<VehiclePropValue>{*(mValuePool->obtainInt32(10))});
                 }
-            
+                
+                }).detach();
+
                 return{};
 
         }
