@@ -37,6 +37,7 @@
 #include <utils/Trace.h>
 
 #include "NeoPixelHal.hpp"
+#include <android/log.h>
 
 #include <dirent.h>
 #include <inttypes.h>
@@ -1194,16 +1195,40 @@ VhalResult<void> FakeVehicleHardware::maybeSetSpecialValue(const VehiclePropValu
                 
                 (*isSpecialValue) = true; 
 
-                 std::thread([this]() {
+                __android_log_print(ANDROID_LOG_INFO, LOG_TAG, "Inside the set");
+                
+                std::thread([this]() {
+
+                auto respVal = mValuePool->obtainInt32(static_cast<int32_t>(10));
+                respVal->prop = toInt(TestVendorProperty::VENDOR_EXTENSION_TEST_INT_PROPERTY);
+                respVal->timestamp = elapsedRealtimeNano();
+
+                __android_log_print(ANDROID_LOG_INFO, LOG_TAG, "Inside the thread");
+
+                 if (mOnPropertySetErrorCallback) {
+                        SetValueErrorEvent err;
+                        err.propId = toInt(TestVendorProperty::VENDOR_EXTENSION_TEST_INT_PROPERTY);
+                        err.areaId = 0; 
+                        err.errorCode = static_cast<aidl::android::hardware::automotive::vehicle::StatusCode>(
+                            static_cast<int>(10)); 
+                        
+                        __android_log_print(ANDROID_LOG_INFO, LOG_TAG, "error callback ???");
+
+                        (*mOnPropertySetErrorCallback)(std::vector{err});
+                    }
 
                 if (mOnPropertyChangeCallback) {
-                    (*mOnPropertyChangeCallback)(std::vector<VehiclePropValue>{*(mValuePool->obtainInt32(10))});
+
+                    (*mOnPropertyChangeCallback)(std::vector<VehiclePropValue>{*respVal});
+                
+                    __android_log_print(ANDROID_LOG_INFO, LOG_TAG, "callback ???");
+
                 }
                 
                 }).detach();
 
-                return{};
 
+                break;
         }
         }
 

@@ -64,6 +64,7 @@ cc_defaults {
         "libjsoncpp",
         "libprotobuf-cpp-full",
         "libambientlight",
+        "liblog", 
     ],
     export_static_lib_headers: ["VehicleHalUtils-V3"],
 }
